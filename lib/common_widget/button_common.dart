@@ -69,10 +69,6 @@ class ButtonWidget extends StatelessWidget {
           primary: color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(fieldRadius ?? 10),
-            side: BorderSide(
-              width: 2,
-              color: borderColor ?? Colors.blue.shade600,
-            ),
           ),
           padding: const EdgeInsets.all(1),
         ),

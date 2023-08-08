@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mudra_yojana/screen/aadhar_with_pan_screen/aadhar_with_pan_controller.dart';
-import 'package:mudra_yojana/screen/aadhar_with_pan_screen/aadhar_with_pan_widget.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_widget.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_links_controller.dart';
 
-class AadhaarWithPan extends StatelessWidget {
-  const AadhaarWithPan({super.key});
+class QuickLinksScreen extends StatelessWidget {
+  const QuickLinksScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(AadharWithPanScreenController());
+    Get.put(QuickLinksScreenController());
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -22,11 +23,12 @@ class AadhaarWithPan extends StatelessWidget {
           ),
         ),
         title: const Text(
-          'आधार को पैनकार्ड से लिंक करें',
+          'Quick Links',
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: aadharWithPanScreenView(),
+      backgroundColor: Colors.white60,
+      body: quickLinksScreenGridview(),
     );
   }
 }
