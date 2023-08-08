@@ -76,13 +76,6 @@ class ButtonWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            icon != null
-                ? Icon(
-                    icon,
-                    color: Colors.white,
-                    size: 30,
-                  )
-                : const SizedBox(),
             icon != null ? const SizedBox(width: 3) : const SizedBox(),
             image != null
                 ? Container(
@@ -102,6 +95,16 @@ class ButtonWidget extends StatelessWidget {
                   fontWeight: fontWeight ?? FontWeight.bold,
                   fontFamily: fontFamily ?? 'Helvetica_normal'),
             ),
+            icon != null
+                ? Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Icon(
+                      icon,
+                      color: Colors.white,
+                      size: 25,
+                    ),
+                  )
+                : const SizedBox(),
           ],
         ),
       ),
