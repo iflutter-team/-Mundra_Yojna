@@ -27,7 +27,8 @@ Widget document3() {
         requiredDocument("Required Document 3"),
         verticalSizeBox(10),
         documentCard("Proof of identity",
-            "Utility bills(electricity bill, telephone bill,and so on),Aadhaar card,Voter's ID card,passport,etc."),
+            "Utility bills(electricity bill, telephone bill,and so on),Aadhaar card,Voter's ID card,passport,etc.",
+            image: "asserts/images/AadhaarPANCard.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(

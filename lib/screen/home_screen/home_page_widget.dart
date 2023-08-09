@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
+import 'package:mudra_yojana/utils/asset_res.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 AppBar homePageAppBar() {
@@ -24,21 +25,25 @@ Widget homePageBody() {
         builder: (controller) => cardCommon(
             StringRes.homePageMudraPmmy,
             "प्रधानमंत्री मुद्रा योजना(PMMY)",
-            () => controller.goToMudraPmmYScreen()),
+            () => controller.goToMudraPmmYScreen(),
+            image: AssetRes.mudraHome),
       ),
       verticalSizeBox(10),
       GetBuilder<HomeController>(
         builder: (controller) => cardCommon(
-            StringRes.homePageMudraPmmy,
-            "All Government Yojna's",
-            () => controller.goToAllGovernmentYojna()),
+          StringRes.homePageMudraPmmy,
+          "All Government Yojna's",
+          () => controller.goToAllGovernmentYojna(),
+        ),
       ),
       verticalSizeBox(10),
       GetBuilder<HomeController>(
-          builder: (controller) => cardCommon(
-              StringRes.aadhaarWithPanHome,
-              "Link Aadhaar with Pan Card",
-              () => controller.goToAadhaarWithPan())),
+        builder: (controller) => cardCommon(
+          StringRes.aadhaarWithPanHome,
+          "Link Aadhaar with Pan Card",
+          () => controller.goToAadhaarWithPan(),
+        ),
+      ),
       verticalSizeBox(20),
       yojnaSubmitButton(),
       verticalSizeBox(20),
@@ -66,24 +71,27 @@ Widget yojnaSubmitButton() {
   );
 }
 
-Widget cardCommon(String text, String buttonText, Function() onPressed) {
+Widget cardCommon(String text, String buttonText, Function() onPressed,
+    {String? image}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Card(
       color: Colors.white10,
       shape: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.white)),
+        borderRadius: BorderRadius.circular(10),
+        borderSide: const BorderSide(color: Colors.white),
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           children: [
             Container(
               height: Get.width * 0.50,
               width: Get.width,
               decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.circular(15)),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: image != null ? Image.asset(image) : const SizedBox(),
             ),
             verticalSizeBox(12),
             Text(
@@ -101,7 +109,8 @@ Widget cardCommon(String text, String buttonText, Function() onPressed) {
               minHeight: Get.height * 0.065,
               minWidth: Get.width * 0.75,
               onPressed: onPressed,
-            )
+            ),
+            verticalSizeBox(10)
           ],
         ),
       ),

@@ -27,7 +27,8 @@ Widget document2() {
         requiredDocument("Required Document 2"),
         verticalSizeBox(10),
         documentCard("Proof of identity",
-            "Aadhaar card, Voter's ID card,driving license,passport,etc."),
+            "Aadhaar card, Voter's ID card,driving license,passport,etc.",
+            image: "asserts/images/aadhaar.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(

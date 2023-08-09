@@ -27,7 +27,8 @@ Widget document4() {
         requiredDocument("Required Document 4"),
         verticalSizeBox(10),
         documentCard(
-            "Photographs", "2 passport-sized photographs of the applicant"),
+            "Photographs", "2 passport-sized photographs of the applicant",
+            image: "asserts/images/pasport_image.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(

@@ -26,7 +26,8 @@ Widget document5() {
       children: [
         requiredDocument("Required Document 5"),
         verticalSizeBox(10),
-        documentCard("Caste Certificate", "If applicable"),
+        documentCard("Caste Certificate", "If applicable",
+            image: "asserts/images/janm.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(

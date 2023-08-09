@@ -22,7 +22,7 @@ Widget offeringPage1Body() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         containerCommon(Colors.orange, "• Product/Offerings of MUDRA •",
             vertical: 10),

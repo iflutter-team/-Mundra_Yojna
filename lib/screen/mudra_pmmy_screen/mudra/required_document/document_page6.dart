@@ -27,7 +27,8 @@ Widget document6() {
         requiredDocument("Required Document 6"),
         verticalSizeBox(10),
         documentCard("Other document",
-            "Utility bills(electricity bill, telephone bill,and so on),Aadhaar card,Voter's ID card,passport,etc."),
+            "Utility bills(electricity bill, telephone bill,and so on),Aadhaar card,Voter's ID card,passport,etc.",
+            image: "asserts/images/application_form.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_screen_2.dart';
+import 'package:mudra_yojana/utils/asset_res.dart';
 
 Widget mudraPage1() {
   return Padding(
@@ -13,8 +14,8 @@ Widget mudraPage1() {
           height: Get.height * 0.25,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: Colors.redAccent,
           ),
+          child: Image.asset(AssetRes.mudraHome),
         ),
         verticalSizeBox(10),
         Text(

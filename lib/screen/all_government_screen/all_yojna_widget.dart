@@ -9,8 +9,14 @@ Widget allYojnaBody() {
   return ListView(
     children: [
       cardCommon(StringRes.homePageMudraPmmy, "PMMY", () {}),
+      cardCommon(
+        StringRes.homePageMudraPmmy,
+        "PMMY",
+        () {},
+      ),
       verticalSizeBox(10),
-      cardCommon(StringRes.homePageMudraPmmy, "Next", () =>Get.to(()=>const AllYojnaPage1())),
+      cardCommon(StringRes.homePageMudraPmmy, "Next",
+          () => Get.to(() => const AllYojnaPage1())),
     ],
   );
 }

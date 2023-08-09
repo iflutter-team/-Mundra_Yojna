@@ -26,7 +26,8 @@ Widget document1() {
         requiredDocument("Required Document 1"),
         verticalSizeBox(10),
         documentCard("Application Form",
-            "Duly filled up application form on the basis of the loan category"),
+            "Duly filled up application form on the basis of the loan category",
+            image: "asserts/images/application_form.jpg"),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: ButtonWidget(
@@ -44,7 +45,7 @@ Widget document1() {
   );
 }
 
-Widget documentCard(String title, String subTitle) {
+Widget documentCard(String title, String subTitle, {String? image}) {
   return Card(
     elevation: 5,
     shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
@@ -55,7 +56,7 @@ Widget documentCard(String title, String subTitle) {
           Container(
             height: 100,
             width: 100,
-            color: Colors.red,
+            child: image != null ? Image.asset(image) : const SizedBox(),
           ),
           horizontalSizeBox(5),
           Column(

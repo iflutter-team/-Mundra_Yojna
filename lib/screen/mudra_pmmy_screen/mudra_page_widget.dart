@@ -4,10 +4,18 @@ import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/bank_list/bank_list_
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/benefits_screen/benefits_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/categories_loan/categories_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/covered_activities/activities_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/covered_businesses/covered_businesses_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/eligibility_page/eligibility_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/faqs_loan/faqs_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/flayer_mudra/flayer_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/how_to_apply/apply_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/main_line_nbfc/main_line_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/mudra_bank_offering/mudra_bank_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/offerings__mudra_page/offerings_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/purpose_pmmy/purpose_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/the_mudra/the_mudra_1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/what__is_mudra/what_is_page1.dart';
 
 Widget commonBox(Color colorBg, Color colorBorder, String text,
     Function() onPressed, Color iconBg) {
@@ -86,8 +94,12 @@ Widget mudraPageBody() {
         ),
         Row(
           children: [
-            commonBox(Colors.orangeAccent.shade100, Colors.orange,
-                "Mudra Flayer", () {}, Colors.blueGrey),
+            commonBox(
+                Colors.orangeAccent.shade100,
+                Colors.orange,
+                "Mudra Flayer",
+                () => Get.to(() => const FlayerPage1()),
+                Colors.blueGrey),
             commonBox(Colors.deepPurple.shade100, Colors.purple, "MUDRA Loans",
                 () => Get.to(() => const CategoriesPage1()), Colors.brown)
           ],
@@ -107,15 +119,19 @@ Widget mudraPageBody() {
         Row(
           children: [
             commonBox(Colors.brown.shade200, Colors.brown, "Purpose of PMMY",
-                () {}, Colors.indigo),
-            commonBox(Colors.lightGreen.shade200, Colors.lightGreen,
-                "Covered Businesses", () {}, Colors.teal)
+                () => Get.to(() => const PurposePage1()), Colors.indigo),
+            commonBox(
+                Colors.lightGreen.shade200,
+                Colors.lightGreen,
+                "Covered Businesses",
+                () => Get.to(() => const BusinessesPage1()),
+                Colors.teal)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.teal.shade200, Colors.teal, "What is Mudra Card?",
-                () {}, Colors.lightGreen),
+                () => Get.to(() => const WhatIsPage1()), Colors.lightGreen),
             commonBox(Colors.redAccent.shade100, Colors.red, "List of Banks",
                 () => Get.to(() => const BankListPage1()), Colors.blueGrey)
           ],
@@ -123,17 +139,25 @@ Widget mudraPageBody() {
         Row(
           children: [
             commonBox(Colors.amber.shade200, Colors.amber, "Mainline NBFCs",
-                () {}, Colors.purpleAccent),
-            commonBox(Colors.blue.shade100, Colors.blue,
-                "NBFC offering Mudra Bank", () {}, Colors.pinkAccent)
+                () => Get.to(() => const LinkPage1()), Colors.purpleAccent),
+            commonBox(
+                Colors.blue.shade100,
+                Colors.blue,
+                "NBFC offering Mudra Bank",
+                () => Get.to(() => const MudraBankPage1()),
+                Colors.pinkAccent)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.blueGrey.shade100, Colors.blueGrey,
-                "How to Apply for PMMY?", () {}, Colors.blue),
+            commonBox(
+                Colors.blueGrey.shade100,
+                Colors.blueGrey,
+                "How to Apply for PMMY?",
+                () => Get.to(() => const ApplyPage1()),
+                Colors.blue),
             commonBox(Colors.teal.shade100, Colors.teal, "FAOs on Mudra Loan",
-                () {}, Colors.orange)
+                () => Get.to(() => const FaqsPage1()), Colors.orange)
           ],
         ),
       ],
