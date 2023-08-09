@@ -61,7 +61,7 @@ Widget verifyYourPanScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.verifyYourPanScreenUrl,
+                onPressed: () =>controller.verifyYourPan(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

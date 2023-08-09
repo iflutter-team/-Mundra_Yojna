@@ -61,7 +61,7 @@ Widget authenticateNoticeOrderScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.authenticateNoticeOrderScreenUrl,
+                onPressed: () =>controller.authenticateNoticeOrder(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

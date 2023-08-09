@@ -61,7 +61,7 @@ Widget tdsOnCashWithdrwalScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.tdsOnCashWithdrawScreenUrl,
+                onPressed: () =>controller.tdsOnCashWithdraw(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

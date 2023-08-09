@@ -61,7 +61,7 @@ Widget knowTANDetailsScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.knowTanDetailsScreenUrl,
+                onPressed: () =>controller.knowTanDetails(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

@@ -61,7 +61,7 @@ Widget knowPaymentStatusScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.knowPaymentStatusScreenUrl,
+                onPressed: () =>controller.knowPaymentStatus(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

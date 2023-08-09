@@ -82,7 +82,7 @@ Widget linkAadharScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.linkAadharScreenUrl,
+                onPressed: () =>controller.linkAadhar(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

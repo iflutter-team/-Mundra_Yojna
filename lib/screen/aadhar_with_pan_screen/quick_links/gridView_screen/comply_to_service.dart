@@ -61,7 +61,7 @@ Widget complyToNoticeScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.complyToNoticeScreenUrl,
+                onPressed: () =>controller.complyToNotice(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

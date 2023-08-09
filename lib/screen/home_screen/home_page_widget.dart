@@ -31,6 +31,7 @@ Widget homePageBody() {
       verticalSizeBox(10),
       GetBuilder<HomeController>(
         builder: (controller) => cardCommon(
+          image: AssetRes.mudraYojna,
           StringRes.homePageMudraPmmy,
           "All Government Yojna's",
           () => controller.goToAllGovernmentYojna(),
@@ -39,6 +40,7 @@ Widget homePageBody() {
       verticalSizeBox(10),
       GetBuilder<HomeController>(
         builder: (controller) => cardCommon(
+          image: AssetRes.link,
           StringRes.aadhaarWithPanHome,
           "Link Aadhaar with Pan Card",
           () => controller.goToAadhaarWithPan(),

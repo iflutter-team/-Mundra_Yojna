@@ -61,7 +61,7 @@ Widget instantEPanScreenScreen() {
                 textColor: Colors.white,
                 text: 'N E X T',
                 color: Colors.red,
-                onPressed: () =>controller.instantEPanScreenUrl,
+                onPressed: () =>controller.instantEPan(),
                 minHeight: Get.height * 0.065,
                 minWidth: Get.width * 0.90,
               ),
