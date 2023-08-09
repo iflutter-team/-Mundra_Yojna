@@ -50,7 +50,7 @@ Widget documentCard(String title, String subTitle, {String? image}) {
     elevation: 5,
     shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 15),
       child: Row(
         children: [
           Container(
@@ -62,10 +62,13 @@ Widget documentCard(String title, String subTitle, {String? image}) {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              SizedBox(
+                width: Get.width * 0.55,
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
               verticalSizeBox(5),
               Container(

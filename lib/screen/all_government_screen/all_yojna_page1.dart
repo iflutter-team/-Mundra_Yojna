@@ -4,7 +4,6 @@ import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/all_government_screen/all_yojna_page2.dart';
 import 'package:mudra_yojana/utils/asset_res.dart';
-import 'package:mudra_yojana/utils/string_res.dart';
 
 class AllYojnaPage1 extends StatelessWidget {
   const AllYojnaPage1({super.key});
@@ -64,7 +63,10 @@ Widget mukhyMantriLaadliYojna() {
               children: [
                 Text(
                   'मुख्यमंत्री लाडली बहन योजना',
-                  style: TextStyle(color: Colors.red, fontSize: 25,),
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 25,
+                  ),
                 ),
               ],
             ),
@@ -90,7 +92,7 @@ Widget mukhyMantriLaadliYojna() {
                     text: 'N E X T',
                     color: Colors.red,
                     onPressed: () {
-                      Get.to(()=> const AllYojnaPage2());
+                      Get.to(() => const AllYojnaPage2());
                     },
                     minHeight: 55,
                     minWidth: Get.width * 0.90,

@@ -185,7 +185,7 @@ AppBar mudraPageAppBar() {
               fontWeight: FontWeight.bold, color: Colors.purple.shade300),
         ),
         const Text(
-          "पूंजी सफलता की कुंज",
+          "पुंजी सफ़लता की कुंजी",
           style: TextStyle(
               fontWeight: FontWeight.bold, color: Colors.black, fontSize: 14),
         ),
