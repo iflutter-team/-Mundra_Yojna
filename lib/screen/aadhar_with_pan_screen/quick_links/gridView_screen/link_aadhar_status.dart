@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 
 class LinkAadharStatus extends StatelessWidget {
   const LinkAadharStatus({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(GridViewController());
     return Scaffold(
       backgroundColor: const Color(0xfffef4f3),
       appBar: AppBar(
@@ -32,33 +34,34 @@ class LinkAadharStatus extends StatelessWidget {
   }
 }
 
-
-
 Widget linkAadharStatusScreen() {
-  return ListView(
-    children: [
-      verticalSizeBox(Get.height * 0.030),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Image.asset('asserts/images/linkaadharpan.jpeg'),
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: ButtonWidget(
-              textSize: 25,
-              textColor: Colors.white,
-              text: 'N E X T',
-              color: Colors.red,
-              onPressed: () {},
-              minHeight: 55,
-              minWidth: Get.width * 0.90,
+  return GetBuilder<GridViewController>(
+    id: 'LinkAadharStatus',
+    builder: (controller) => ListView(
+      children: [
+        verticalSizeBox(Get.height * 0.030),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Image.asset('asserts/images/linkaadharpan.jpeg'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: ButtonWidget(
+                textSize: 25,
+                textColor: Colors.white,
+                text: 'Visit Link',
+                color: Colors.red,
+                onPressed: () => controller.linkAadharStatus(),
+                minHeight: 55,
+                minWidth: Get.width * 0.90,
+              ),
             ),
-          ),
-        ],
-      ),
-    ],
+          ],
+        ),
+      ],
+    ),
   );
 }
