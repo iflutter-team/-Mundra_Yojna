@@ -27,7 +27,7 @@ class QuickLinksScreen extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      backgroundColor: Colors.white60,
+      backgroundColor: Colors.white,
       body: quickLinksScreenGridview(),
     );
   }

@@ -48,7 +48,7 @@ Widget verifyServiceRequestScreen() {
           ),
         ),
       ),
-      verticalSizeBox(Get.height * 0.050),
+      verticalSizeBox(Get.height * 0.010),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

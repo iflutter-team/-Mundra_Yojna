@@ -48,7 +48,7 @@ Widget complyToNoticeScreen() {
           ),
         ),
       ),
-      verticalSizeBox(Get.height * 0.13),
+      verticalSizeBox(Get.height * 0.10),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

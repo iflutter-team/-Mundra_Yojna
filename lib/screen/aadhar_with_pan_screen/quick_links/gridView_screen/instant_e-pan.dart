@@ -48,7 +48,7 @@ Widget instantEPanScreenScreen() {
           ),
         ),
       ),
-      verticalSizeBox(Get.height * 0.21),
+      verticalSizeBox(Get.height * 0.16),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

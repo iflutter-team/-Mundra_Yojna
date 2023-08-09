@@ -46,7 +46,7 @@ Widget incomeTaxReturnScreen() {
           ),
         ),
       ),
-      verticalSizeBox(Get.height*0.24),
+      verticalSizeBox(Get.height*0.21),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

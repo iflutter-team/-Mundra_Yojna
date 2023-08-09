@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget commonGridView(
-    {required double radius, required Color color, void Function()? onTap}) {
+Widget commonGridView({
+  required double radius,
+  required Color color,
+  void Function()? onTap,
+}) {
   return InkWell(
     onTap: onTap,
     child: CircleAvatar(
