@@ -24,8 +24,8 @@ Widget offeringPage1Body() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        containerCommon(
-            Colors.orange, "• Product/Offerings of MUDRA •", 15, 10),
+        containerCommon(Colors.orange, "• Product/Offerings of MUDRA •",
+            vertical: 10),
         verticalSizeBox(10),
         cardAllCommon(
           "Micro Units Development and Refinance Agency Ltd. [MUDRA] is an NBFC supporting development of micro enterprise sector in the country. MUDRA provides refinance support to Banks/MFIS / NBFCs for lending to micro units having loan requirement upto 10 lakh. MUDRA provides refinance support to micro business under the Scheme of Pradhan Mantri MUDRA Yojana. The other products are for development support to the sector. The bouquet of offerings of MUDRA is depicted below. The offerings are being targeted across the spectrum of beneficiary segments.",

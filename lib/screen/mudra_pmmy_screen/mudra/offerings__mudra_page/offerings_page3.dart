@@ -36,7 +36,7 @@ Widget offeringPage3Body() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
     child: ListView(children: [
-      containerCommon(Colors.orange, "• Purpose of MUDRA loan •", 15, 10),
+      containerCommon(Colors.orange, "• Purpose of MUDRA loan •", vertical: 10),
       verticalSizeBox(10),
       cardAllCommon("", Colors.purple)
     ]),

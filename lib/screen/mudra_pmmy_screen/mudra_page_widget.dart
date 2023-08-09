@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/bank_list/bank_list_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/benefits_screen/benefits_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/categories_loan/categories_page1.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/covered_activities/activities_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/eligibility_page/eligibility_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/offerings__mudra_page/offerings_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
@@ -85,15 +89,19 @@ Widget mudraPageBody() {
             commonBox(Colors.orangeAccent.shade100, Colors.orange,
                 "Mudra Flayer", () {}, Colors.blueGrey),
             commonBox(Colors.deepPurple.shade100, Colors.purple, "MUDRA Loans",
-                () {}, Colors.brown)
+                () => Get.to(() => const CategoriesPage1()), Colors.brown)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.pinkAccent.shade100, Colors.pink,
-                "Covered Activities", () {}, Colors.cyan),
-            commonBox(Colors.indigo.shade100, Colors.indigo, "Benefits", () {},
-                Colors.redAccent)
+            commonBox(
+                Colors.pinkAccent.shade100,
+                Colors.pink,
+                "Covered Activities",
+                () => Get.to(() => const ActivitiesPage1()),
+                Colors.cyan),
+            commonBox(Colors.indigo.shade100, Colors.indigo, "Benefits",
+                () => Get.to(() => const BenefitsPage1()), Colors.redAccent)
           ],
         ),
         Row(
@@ -109,7 +117,7 @@ Widget mudraPageBody() {
             commonBox(Colors.teal.shade200, Colors.teal, "What is Mudra Card?",
                 () {}, Colors.lightGreen),
             commonBox(Colors.redAccent.shade100, Colors.red, "List of Banks",
-                () {}, Colors.blueGrey)
+                () => Get.to(() => const BankListPage1()), Colors.blueGrey)
           ],
         ),
         Row(
