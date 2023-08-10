@@ -6,7 +6,7 @@ import 'package:mudra_yojana/screen/home_screen/home_screen.dart';
 class SplashScreenController extends GetxController {
   @override
   void onInit() {
-    Timer(const Duration(seconds: 4), () => const HomeScreen());
+    Timer(const Duration(seconds: 1), () => Get.off(() => const HomeScreen()));
     super.onInit();
   }
 }

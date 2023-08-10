@@ -11,7 +11,7 @@ class PurposePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mudraPageAppBar(),
-      body: mudraPage2Body(() => Get.to(()=>const PurposePage3())),
+      body: mudraPage2Body(() => Get.to(() => const PurposePage3())),
     );
   }
 }
