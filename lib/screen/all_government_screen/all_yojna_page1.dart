@@ -34,25 +34,22 @@ Widget mukhyMantriLaadliYojna() {
     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
     child: Column(
       children: [
-        InkWell(
-          onTap: () {},
-          child: Container(
-            height: Get.height * 0.25,
-            width: Get.width * 0.91,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: Colors.black, width: 3),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Image.asset(
-                  AssetRes.aadharToPanLinkImage,
-                  scale: 4,
-                ),
-              ],
-            ),
+        Container(
+          height: Get.height * 0.25,
+          width: Get.width * 0.91,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.black, width: 3),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Image.asset(
+                AssetRes.laadliYojna,
+               fit: BoxFit.fill,
+              ),
+            ],
           ),
         ),
         verticalSizeBox(Get.height * 0.025),
@@ -72,7 +69,7 @@ Widget mukhyMantriLaadliYojna() {
             ),
             verticalSizeBox(Get.height * 0.040),
             const Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'शशकत महिला. शशकत परिवार.\nश्शक्त समाज. श्शक्त प्रदेश। शशक्त देश।',
@@ -89,7 +86,7 @@ Widget mukhyMantriLaadliYojna() {
                   child: ButtonWidget(
                     textSize: 25,
                     textColor: Colors.white,
-                    text: 'N E X T',
+                    text: 'आगे बढे',
                     color: Colors.red,
                     onPressed: () {
                       Get.to(() => const AllYojnaPage2());

@@ -21,7 +21,7 @@ Widget allYojnaBody() {
       verticalSizeBox(10),
       cardCommon(
         StringRes.homePageMudraPmmy,
-        "Next",
+        "आगे बढे",
         () => Get.to(
           () => const AllYojnaPage1(),
         ),
