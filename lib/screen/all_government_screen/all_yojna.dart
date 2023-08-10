@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/screen/all_government_screen/aavashyak_dastavej/dastavej_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/aswikaran/aswikaran_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/copyright_niti/copyright_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/gopniyta/gopniyta_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/kriyanvayan/kriyanvayan_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/niyam_and_sharat/nitamandsharat_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/prasasanik_nirdesh/prasasanik_nirdesh_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/sitemap/sitemap_page1.dart';
+import 'package:mudra_yojana/screen/all_government_screen/yojna_k_laabh/yojna_k_laabh_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
 class AllYojna extends StatelessWidget {
@@ -52,33 +60,33 @@ Widget allYoujnaBody() {
         Row(
           children: [
             commonBox(Colors.pinkAccent.shade200, Colors.transparent,
-                "योजना के लाभ", () {}, Colors.cyan),
+                "योजना के लाभ", () =>Get.to(()=>const YojnaKLaabhPage1()), Colors.cyan),
             commonBox(Colors.indigo.shade300, Colors.transparent, "क्रियान्वयन",
-                () {}, Colors.redAccent)
+                () =>Get.to(()=>const KriyanVayanPage1()), Colors.redAccent)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.brown.shade400, Colors.transparent,
-                "प्रशासनिक निर्देश", () {}, Colors.indigo),
+                "प्रशासनिक निर्देश", () =>Get.to(()=>const PrasasnikNirdeshPage1()), Colors.indigo),
             commonBox(Colors.lightGreen.shade400, Colors.transparent,
-                "अश्वीकरण", () {}, Colors.teal)
+                "अश्वीकरण", () =>Get.to(()=>const AswikaranPage1()), Colors.teal)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.teal.shade300, Colors.transparent,
-                "नियम और शर्तें", () {}, Colors.lightGreen),
+                "नियम और शर्तें", () =>Get.to(()=>const NiyamAndSharatPage1()), Colors.lightGreen),
             commonBox(Colors.redAccent.shade200, Colors.transparent,
-                "कॉपीराइट निति", () {}, Colors.blueGrey)
+                "कॉपीराइट निति", () => Get.to(()=>const CopyRightPage1()), Colors.lightBlueAccent)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.amber.shade300, Colors.transparent,
-                "गोपीनियाता नीति", () {}, Colors.purpleAccent),
+                "गोपीनियाता नीति", () =>Get.to(()=>const GopNiytaPage1()), Colors.purpleAccent),
             commonBox(Colors.blue.shade300, Colors.transparent, "साइटमैप ",
-                () {}, Colors.pinkAccent)
+                () => Get.to(() => const SiteMapPage1()), Colors.pinkAccent)
           ],
         ),
       ],
