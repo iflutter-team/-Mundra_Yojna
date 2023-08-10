@@ -40,13 +40,13 @@ Widget siteMapPageScreenView3() {
         children: [
           verticalSizeBox(20),
           Container(
-            height: Get.height * 0.28,
-            width: Get.width * 0.91,
+            height: 200,
+            width: 500,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Image.asset(AssetRes.amitShah),
+            child: Image.asset(AssetRes.shivrajSinh),
           ),
           verticalSizeBox(20),
           Padding(

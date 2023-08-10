@@ -4,6 +4,7 @@ import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/all_government_screen/all_yojna.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
+import 'package:mudra_yojana/utils/asset_res.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 class CopyRightNitiPage3 extends StatelessWidget {
@@ -39,12 +40,13 @@ Widget copyRightScreenView3() {
         children: [
           verticalSizeBox(20),
           Container(
-            height: Get.height * 0.28,
-            width: Get.width * 0.91,
+            height: 200,
+            width: 500,
             decoration: BoxDecoration(
-              color: Colors.amberAccent,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(20),
             ),
+            child: Image.asset(AssetRes.shivrajSinh),
           ),
           verticalSizeBox(20),
           Padding(

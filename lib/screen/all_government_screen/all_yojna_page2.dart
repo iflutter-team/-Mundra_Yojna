@@ -28,7 +28,7 @@ Widget pradhanMantriMudraYojna(Function() onPressed) {
         ButtonWidget(
           textSize: 25,
           textColor: Colors.white,
-          text: 'N E X T',
+          text: 'आगे बढे',
           color: Colors.red,
           onPressed: onPressed,
           minHeight: 55,

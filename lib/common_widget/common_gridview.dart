@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 Widget commonGridView({
   required double radius,
-  required Color color,
+  Color? color,
+  Widget? child,
   void Function()? onTap,
 }) {
   return InkWell(

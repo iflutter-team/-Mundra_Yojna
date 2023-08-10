@@ -7,4 +7,5 @@ class AssetRes {
   static const mudraYojna = "asserts/images/pradhanmantrimudrayojana.png";
   static const link = "asserts/images/link.png";
   static const splashScreen = "asserts/images/splash2.jpg";
+  static const shivrajSinh = "asserts/images/ShivrajSinghChouhan.jpg";
 }
