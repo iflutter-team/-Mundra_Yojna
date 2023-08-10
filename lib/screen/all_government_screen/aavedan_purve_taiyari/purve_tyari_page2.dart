@@ -28,7 +28,8 @@ Widget purveTyariPage2Body() {
         containerCommon(Colors.purpleAccent, "आवेदन पूर्व तैयारियां 2"),
         verticalSizeBox(15),
         documentCard("आधार कार्ड",
-            "महिला का स्वयं का बैंक खाता होना अनिवार्य है | संयुक्त खाता मान्य नहीं होगा |"),
+            "महिला का स्वयं का बैंक खाता होना अनिवार्य है | संयुक्त खाता मान्य नहीं होगा |",
+            image: "asserts/images/aadhaar.jpg"),
         verticalSizeBox(20),
         ButtonWidget(
           text: "आगे बढे",

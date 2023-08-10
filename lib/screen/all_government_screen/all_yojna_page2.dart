@@ -35,8 +35,8 @@ Widget pradhanMantriMudraYojna(Function() onPressed) {
         ),
         verticalSizeBox(15),
         Container(
-          height: Get.height * 0.28,
-          width: Get.width * 0.91,
+          height: 100,
+          width: 100,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),

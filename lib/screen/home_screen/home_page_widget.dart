@@ -87,13 +87,17 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           children: [
+            verticalSizeBox(10),
             Container(
+              color: Colors.black,
               height: Get.width * 0.50,
               width: Get.width,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: image != null ? Image.asset(image) : const SizedBox(),
+              child: image != null
+                  ? Image.asset(
+                      image,
+                      fit: BoxFit.fill,
+                    )
+                  : const SizedBox(),
             ),
             verticalSizeBox(12),
             Text(

@@ -27,8 +27,11 @@ Widget purveTyariPage1Body() {
         verticalSizeBox(20),
         containerCommon(Colors.purpleAccent, "आवेदन पूर्व तैयारियां 1"),
         verticalSizeBox(15),
-        documentCard("आधार समग्र e-KYC",
-            "समग्र पोर्टल पर आधार के डाटा का ओटीपी या बायोमेट्रिक के माध्यम से मिलान | e-KYC न होने की स्थिति मे आवेदन प्राप्त नहीं किया जायगा |"),
+        documentCard(
+          "आधार समग्र e-KYC",
+          "समग्र पोर्टल पर आधार के डाटा का ओटीपी या बायोमेट्रिक के माध्यम से मिलान | e-KYC न होने की स्थिति मे आवेदन प्राप्त नहीं किया जायगा |",
+          image: "asserts/images/kycicon.jpg",
+        ),
         verticalSizeBox(20),
         ButtonWidget(
           text: "आगे बढे",

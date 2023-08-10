@@ -28,7 +28,8 @@ Widget purveTyariPage3Body() {
         containerCommon(Colors.purpleAccent, "आवेदन पूर्व तैयारियां 3"),
         verticalSizeBox(15),
         documentCard("बैंक खाता आधार लिंक एवं डीबीटी सक्रिय",
-            "महिला के स्वयं के बैंक खाते मे आधार लिंक एवं डीबीटी सक्रिय होना चाहिए |"),
+            "महिला के स्वयं के बैंक खाते मे आधार लिंक एवं डीबीटी सक्रिय होना चाहिए |",
+            image: "asserts/images/bankicon.png"),
         verticalSizeBox(20),
         ButtonWidget(
           text: "आगे बढे",

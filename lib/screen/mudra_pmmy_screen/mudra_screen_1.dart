@@ -27,7 +27,7 @@ Widget mudraPage1() {
         ),
         verticalSizeBox(15),
         const Text(
-          "पूंजी सफलता की कुंज्",
+          "पुंजी सफ़लता की कुंजी",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         verticalSizeBox(5),

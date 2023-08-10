@@ -27,7 +27,8 @@ Widget dastavejPage2Body() {
         verticalSizeBox(20),
         requiredDocument("आवश्यक दस्तावेज़ 2"),
         verticalSizeBox(15),
-        documentCard("आधार कार्ड", "UIDAI द्वारा जारी फ़ोटो आईडी"),
+        documentCard("आधार कार्ड", "UIDAI द्वारा जारी फ़ोटो आईडी",
+            image: "asserts/images/aadhaar.jpg"),
         verticalSizeBox(20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),

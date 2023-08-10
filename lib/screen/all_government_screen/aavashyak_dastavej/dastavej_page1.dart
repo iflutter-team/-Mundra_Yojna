@@ -27,10 +27,9 @@ Widget dastavejPage1Body() {
         verticalSizeBox(20),
         requiredDocument("आवश्यक दस्तावेज़ 1"),
         verticalSizeBox(15),
-        documentCard(
-          "समग्र परिवार / सदस्य आई.डी.",
-          "समग्र पोर्टल द्वारा जारी परिवार आईडी अथवा सदस्य आईडी",
-        ),
+        documentCard("समग्र परिवार / सदस्य आई.डी.",
+            "समग्र पोर्टल द्वारा जारी परिवार आईडी अथवा सदस्य आईडी",
+            image: "asserts/images/kycicon.jpg"),
         verticalSizeBox(20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),

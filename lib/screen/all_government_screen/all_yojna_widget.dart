@@ -4,6 +4,7 @@ import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/all_government_screen/all_yojna_page1.dart';
 import 'package:mudra_yojana/screen/home_screen/home_page_widget.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/mudra_yojna_page.dart';
+import 'package:mudra_yojana/utils/asset_res.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 Widget allYojnaBody() {
@@ -11,14 +12,20 @@ Widget allYojnaBody() {
     children: [
       cardCommon(
         StringRes.homePageMudraPmmy,
-        "PMMY",
+        "प्रधानमंत्री मुद्रा योजना(PMMY)",
         () => Get.to(
           () => const MudraYojna(),
         ),
+        image: AssetRes.mudraHome,
       ),
       verticalSizeBox(10),
-      cardCommon(StringRes.homePageMudraPmmy, "Next",
-          () => Get.to(() => const AllYojnaPage1())),
+      cardCommon(
+        StringRes.homePageMudraPmmy,
+        "Next",
+        () => Get.to(
+          () => const AllYojnaPage1(),
+        ),
+      ),
     ],
   );
 }

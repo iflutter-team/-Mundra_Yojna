@@ -27,10 +27,8 @@ Widget dastavejPage3Body() {
         verticalSizeBox(20),
         requiredDocument("आवश्यक दस्तावेज़ 3"),
         verticalSizeBox(15),
-        documentCard(
-          "मोबाइल नंबर",
-          "समग्र पोर्टल में दर्ज मोबाइल नंबर",
-        ),
+        documentCard("मोबाइल नंबर", "समग्र पोर्टल में दर्ज मोबाइल नंबर",
+            image: "asserts/images/mobileicon.png"),
         verticalSizeBox(20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
