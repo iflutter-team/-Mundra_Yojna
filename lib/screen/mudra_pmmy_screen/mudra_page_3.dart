@@ -44,7 +44,6 @@ Widget mudraPage3Body(Function() onPressed) {
             width: 100,
             child: Image.asset(AssetRes.amitShah),
           ),
-          verticalSizeBox(3),
           Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
@@ -59,11 +58,11 @@ Widget mudraPage3Body(Function() onPressed) {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17),
+                        fontSize: 18),
                   ),
                   Text(
                     "(माननीय गृह मंत्री, भारत)",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ],
               ),
@@ -72,22 +71,22 @@ Widget mudraPage3Body(Function() onPressed) {
           verticalSizeBox(10),
           const Text(
             "1. Margin/Promoter's Contribution is as per the policy framework of the lender, which is based on overall guidelines of RBI in this regard. Banks may not insist for margin for Shishu loans.",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 17),
           ),
           verticalSizeBox(10),
           const Text(
             "2. Interest rates are to be charged as per the policy decision of the bank. However, the interest rate charged to ultimate borrowers shall be reasonable.",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 17),
           ),
           verticalSizeBox(10),
           const Text(
             "3. Interest rates should be charged as per the lender's policy. However, the interest rates charged to ultimate borrowers should be reasonable.",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 17),
           ),
           verticalSizeBox(10),
           const Text(
             "4. First charge on all assets created out of the loan extended to the borrower and the assets which are directly associated with the business/project for which credit has bean extended",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 17),
           ),
           verticalSizeBox(10),
           containerCommon(Colors.pink, "What is MUDRA",
@@ -95,7 +94,7 @@ Widget mudraPage3Body(Function() onPressed) {
           verticalSizeBox(10),
           const Text(
             "MUDRA stands for Micro Units Development & Refinance Agency is set up to provide funding to the non-corporate small business sector through various financial institutions like Banks, NBFCs and MFIS",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 17),
           ),
           verticalSizeBox(10),
         ],

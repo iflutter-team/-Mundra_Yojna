@@ -20,7 +20,7 @@ class MudraPage2 extends StatelessWidget {
 
 Widget mudraPage2Body(Function() onPressed) {
   return Padding(
-    padding: const EdgeInsets.all(8.0),
+    padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Column(
@@ -46,11 +46,11 @@ Widget mudraPage2Body(Function() onPressed) {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17),
+                        fontSize: 18),
                   ),
                   Text(
                     "(माननीय प्रधानमंत्री,भारत)",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ],
               ),
@@ -64,17 +64,21 @@ Widget mudraPage2Body(Function() onPressed) {
           verticalSizeBox(15),
           const Text(
               "1. Pradhan Mantri MUDRA Yojana (PMMY) is a scheme set up by the Government of India (Gol) for providing Mudra Loans up to Rs. 10 lakhs to the non-corporate, non-farming small & micro enterprises. Mudra Loans are provided under three categories.",
-              style: TextStyle(color: Colors.black)),
+              style: TextStyle(color: Colors.black, fontSize: 16)),
           verticalSizeBox(10),
           const Text(
               "2. Mudra Loans are provided to income generating small & micro enterprises.",
-              style: TextStyle(color: Colors.black)),
+              style: TextStyle(color: Colors.black, fontSize: 16)),
           verticalSizeBox(10),
           const Text(
-              "3. Extended by Commercial Banks, MFIS, NBFCs and other financial intermediaries."),
+            "3. Extended by Commercial Banks, MFIS, NBFCs and other financial intermediaries.",
+            style: TextStyle(fontSize: 16),
+          ),
           verticalSizeBox(10),
           const Text(
-              "4. Provides financial assistance to small and micro businesses to help them develop and expand their businesses."),
+            "4. Provides financial assistance to small and micro businesses to help them develop and expand their businesses.",
+            style: TextStyle(fontSize: 16),
+          ),
           verticalSizeBox(20),
           ButtonWidget(
             text: "N E X T",
