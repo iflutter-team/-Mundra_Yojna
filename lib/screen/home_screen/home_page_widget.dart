@@ -19,37 +19,41 @@ AppBar homePageAppBar() {
 }
 
 Widget homePageBody() {
-  return ListView(
-    children: [
-      GetBuilder<HomeController>(
-        builder: (controller) => cardCommon(
+  return SingleChildScrollView(
+    physics: const BouncingScrollPhysics(),
+    child: Column(
+      children: [
+        verticalSizeBox(20),
+        yojnaSubmitButton(),
+        verticalSizeBox(15),
+        GetBuilder<HomeController>(
+          builder: (controller) => cardCommon(
+              StringRes.homePageMudraPmmy,
+              "प्रधानमंत्री मुद्रा योजना(PMMY)",
+              () => controller.goToMudraPmmYScreen(),
+              image: AssetRes.mudraHome),
+        ),
+        verticalSizeBox(10),
+        GetBuilder<HomeController>(
+          builder: (controller) => cardCommon(
+            image: AssetRes.mudraYojna,
             StringRes.homePageMudraPmmy,
-            "प्रधानमंत्री मुद्रा योजना(PMMY)",
-            () => controller.goToMudraPmmYScreen(),
-            image: AssetRes.mudraHome),
-      ),
-      verticalSizeBox(10),
-      GetBuilder<HomeController>(
-        builder: (controller) => cardCommon(
-          image: AssetRes.mudraYojna,
-          StringRes.homePageMudraPmmy,
-          "All Government Yojna's",
-          () => controller.goToAllGovernmentYojna(),
+            "All Government Yojna's",
+            () => controller.goToAllGovernmentYojna(),
+          ),
         ),
-      ),
-      verticalSizeBox(10),
-      GetBuilder<HomeController>(
-        builder: (controller) => cardCommon(
-          image: AssetRes.link,
-          StringRes.aadhaarWithPanHome,
-          "Link Aadhaar with Pan Card",
-          () => controller.goToAadhaarWithPan(),
+        verticalSizeBox(10),
+        GetBuilder<HomeController>(
+          builder: (controller) => cardCommon(
+            image: AssetRes.link,
+            StringRes.aadhaarWithPanHome,
+            "Link Aadhaar with Pan Card",
+            () => controller.goToAadhaarWithPan(),
+          ),
         ),
-      ),
-      verticalSizeBox(20),
-      yojnaSubmitButton(),
-      verticalSizeBox(20),
-    ],
+        verticalSizeBox(20),
+      ],
+    ),
   );
 }
 
@@ -116,7 +120,7 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
               minWidth: Get.width * 0.75,
               onPressed: onPressed,
             ),
-            verticalSizeBox(10)
+            verticalSizeBox(15)
           ],
         ),
       ),

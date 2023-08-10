@@ -20,10 +20,10 @@ class AswikaranPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.pinkAccent,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const aswikaranPage2(),
+            () => const aswikaranPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class AswikaranPage1 extends StatelessWidget {
   }
 }
 
-
-Widget aswikaranScreenView (){
+Widget aswikaranScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,18 +41,18 @@ Widget aswikaranScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.blueGrey, 'अश्वीकरण'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.blueGrey, '• अश्वीकरण •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.aswikaranPagePart1, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.aswikaranPagePart2, Colors.teal),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.aswikaranPagePart3, Colors.limeAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.aswikaranPagePart4, Colors.deepPurple),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.aswikaranPagePart5, Colors.deepOrange),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.aswikaranPagePart6, Colors.blue),
         ],
       ),

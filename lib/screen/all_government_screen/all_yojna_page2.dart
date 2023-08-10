@@ -22,55 +22,88 @@ class AllYojnaPage2 extends StatelessWidget {
 Widget pradhanMantriMudraYojna(Function() onPressed) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
-    child: ListView(
-      children: [
-        verticalSizeBox(20),
-        ButtonWidget(
-          textSize: 25,
-          textColor: Colors.white,
-          text: 'आगे बढे',
-          color: Colors.red,
-          onPressed: onPressed,
-          minHeight: 55,
-        ),
-        verticalSizeBox(15),
-        Container(
-          height: 100,
-          width: 100,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+    child: SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          verticalSizeBox(20),
+          ButtonWidget(
+            textSize: 25,
+            textColor: Colors.white,
+            text: 'आगे बढे',
+            color: Colors.red,
+            onPressed: onPressed,
+            minHeight: 55,
           ),
-          child: Image.asset(AssetRes.pm),
-        ),
-        verticalSizeBox(15),
-        SizedBox(
-          width: Get.width * 0.90,
-          child: const Text(
-            StringRes.pradhanMantriYojna1,
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          verticalSizeBox(15),
+          Container(
+            alignment: Alignment.topLeft,
+            height: 100,
+            width: 100,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Image.asset(AssetRes.shivrajSinh),
           ),
-        ),
-        verticalSizeBox(12),
-        SizedBox(
-          width: Get.width * 0.90,
-          child: const Text(
-            StringRes.pradhanMantriYojna2,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-        ),
-        verticalSizeBox(20),
-        SizedBox(
-          width: Get.width * 0.90,
-          child: const Text(
-            StringRes.pradhanMantriYojna3,
-            style: TextStyle(
-              fontSize: 15,
+          verticalSizeBox(5),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.indigo, borderRadius: BorderRadius.circular(15)),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "श्री शिवराज सिंह चौहान",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 18),
+                  ),
+                  verticalSizeBox(3),
+                  const Text(
+                    "(माननीय मुख्यमंत्री, मध्य प्रदेश)",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-        verticalSizeBox(Get.height * 0.10),
-      ],
+          verticalSizeBox(15),
+          SizedBox(
+            width: Get.width * 0.90,
+            child: const Text(
+              StringRes.pradhanMantriYojna1,
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+          ),
+          verticalSizeBox(12),
+          SizedBox(
+            width: Get.width * 0.90,
+            child: const Text(
+              StringRes.pradhanMantriYojna2,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+          verticalSizeBox(20),
+          SizedBox(
+            width: Get.width * 0.90,
+            child: const Text(
+              StringRes.pradhanMantriYojna3,
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
+          ),
+          verticalSizeBox(Get.height * 0.10),
+        ],
+      ),
     ),
   );
 }

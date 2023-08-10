@@ -20,10 +20,10 @@ class CopyRightPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.brown,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const CopyRightNitiPage2(),
+            () => const CopyRightNitiPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class CopyRightPage1 extends StatelessWidget {
   }
 }
 
-
-Widget copyRight1ScreenView (){
+Widget copyRight1ScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,18 +41,18 @@ Widget copyRight1ScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.black, 'कॉपीराइट नीति'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.teal, '• कॉपीराइट नीति •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.copyRightPart1, Colors.green),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.copyRightPart2, Colors.deepOrange),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.copyRightPart3, Colors.greenAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.copyRightPart4, Colors.limeAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.copyRightPart5, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.copyRightPart6, Colors.teal),
         ],
       ),

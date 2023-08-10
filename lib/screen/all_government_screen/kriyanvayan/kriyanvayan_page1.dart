@@ -20,10 +20,10 @@ class KriyanVayanPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.blueGrey,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const KriyanVayanPage2(),
+            () => const KriyanVayanPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class KriyanVayanPage1 extends StatelessWidget {
   }
 }
 
-
-Widget kriyanVayanScreenView (){
+Widget kriyanVayanScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,18 +41,18 @@ Widget kriyanVayanScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.black, 'क्रियान्वयन'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.orangeAccent, '• क्रियान्वयन •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.KriyanVayanPart1, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart2, Colors.teal),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart3, Colors.limeAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart4, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart5, Colors.indigo),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart6, Colors.tealAccent),
           verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.KriyanVayanPart7, Colors.purpleAccent),

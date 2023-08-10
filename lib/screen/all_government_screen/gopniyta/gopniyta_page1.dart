@@ -1,11 +1,11 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:mudra_yojana/screen/all_government_screen/gopniyta/gopniyta_page2.dart';
-import 'package:mudra_yojana/utils/string_res.dart';
+import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/all_government_screen/gopniyta/gopniyta_page2.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
+import 'package:mudra_yojana/utils/string_res.dart';
 
 class GopNiytaPage1 extends StatelessWidget {
   const GopNiytaPage1({super.key});
@@ -17,13 +17,13 @@ class GopNiytaPage1 extends StatelessWidget {
         padding: const EdgeInsets.only(left: 40),
         child: ButtonWidget(
           text: "आगे बढे",
-          textColor: Colors.black,
+          textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.lightGreenAccent,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const GopNiytaPage2(),
+            () => const GopNiytaPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class GopNiytaPage1 extends StatelessWidget {
   }
 }
 
-
-Widget gopNiytaPageView (){
+Widget gopNiytaPageView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,8 +41,8 @@ Widget gopNiytaPageView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.pinkAccent, 'गोपनियता नीति'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.pinkAccent, '• गोपनियता नीति •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.gopNiytaPage1, Colors.deepOrange),
         ],
       ),

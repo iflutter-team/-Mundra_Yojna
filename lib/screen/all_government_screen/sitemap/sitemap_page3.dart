@@ -20,7 +20,7 @@ class SiteMapPage3 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.purple,
+          color: Colors.pinkAccent,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(() => const AllYojna()),
         ),
@@ -40,8 +40,9 @@ Widget siteMapPageScreenView3() {
         children: [
           verticalSizeBox(20),
           Container(
-            height: 200,
-            width: 500,
+            alignment: Alignment.topLeft,
+            height: 150,
+            width: 45,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),

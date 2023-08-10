@@ -1,5 +1,5 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/common_gridview.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/TDS_on_cash_Withdrawal.dart';
@@ -75,10 +75,7 @@ Widget quickLinksScreenGridview() {
               children: [
                 commonGridView(
                     radius: 40,
-                    child: Image.asset(
-                      'asserts/images/everifyReturn.png',
-                      fit: BoxFit.fill,
-                    ),
+                    image: "asserts/images/everifyReturn.png",
                     onTap: () {
                       Get.to(() => const EVerifyScreen());
                     }),
@@ -96,15 +93,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const LinkAadharStatus());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/linkAadharStatus.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const LinkAadharStatus());
+                    },
+                    radius: 40,
+                    image: "asserts/images/linkAadharStatus.jpg"),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -123,10 +116,7 @@ Widget quickLinksScreenGridview() {
                     Get.to(const LinkAadharScreen());
                   },
                   radius: 40,
-                  child: Image.asset(
-                    'asserts/images/linkAadhar.jpg',
-                    fit: BoxFit.fill,
-                  ),
+                  image: "asserts/images/linkAadhar.jpg",
                 ),
                 const SizedBox(
                   width: 80,
@@ -148,15 +138,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const IncomeTaxReturnITR());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/incomeTaxReturn.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const IncomeTaxReturnITR());
+                    },
+                    radius: 40,
+                    image: "asserts/images/incomeTaxReturn.png"),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -171,15 +157,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const IncomeTaxCalculator());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/taxCalendar.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const IncomeTaxCalculator());
+                    },
+                    radius: 40,
+                    image: "asserts/images/taxCalendar.png"),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -194,15 +176,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const EPayTex());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/ePayTax.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const EPayTex());
+                    },
+                    radius: 40,
+                    image: "asserts/images/ePayTax.png"),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -223,15 +201,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const KnowPaymentStatus());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/knowPaymentStatus.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const KnowPaymentStatus());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/knowPaymentStatus.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -246,15 +220,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const InstantEPanScreen());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/instantEPan.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const InstantEPanScreen());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/instantEPan.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -269,15 +239,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const AuthenticateNoticeOrder());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/authenticate.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const AuthenticateNoticeOrder());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/authenticate.jpg'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -298,15 +264,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const KnowYourAO());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/knowYourAO.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const KnowYourAO());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/knowYourAO.jpg'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -321,15 +283,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const TdsOnCashWithdrwal());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/cashWithdrawal.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const TdsOnCashWithdrwal());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/cashWithdrawal.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -344,15 +302,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const VerifyServiceRequest());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/verifyServiceRequest.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const VerifyServiceRequest());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/verifyServiceRequest.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -373,15 +327,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const SubmitTaxEvasion());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/taxEvasion.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const SubmitTaxEvasion());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/taxEvasion.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -395,15 +345,11 @@ Widget quickLinksScreenGridview() {
             Column(
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const ReportAccountMisuse());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/reportAccountMisuse.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const ReportAccountMisuse());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/reportAccountMisuse.jpg'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -418,15 +364,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const VerifyYourPan());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/verifyYourPAn.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const VerifyYourPan());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/verifyYourPAn.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -447,15 +389,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const KnowTANDetails());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/knowTanDetails.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const KnowTANDetails());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/knowTanDetails.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -470,15 +408,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const TaxCalendar());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/taxCalendar.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const TaxCalendar());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/taxCalendar.png'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -493,15 +427,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const TaxInformationService());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/informationService.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const TaxInformationService());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/informationService.jpg'),
                 const SizedBox(
                   width: 80,
                   child: Text(
@@ -523,15 +453,11 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                  onTap: () {
-                    Get.to(() => const ComplyToNotice());
-                  },
-                  radius: 40,
-                  child: Image.asset(
-                    'asserts/images/complyToNotice.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
+                    onTap: () {
+                      Get.to(() => const ComplyToNotice());
+                    },
+                    radius: 40,
+                    image: 'asserts/images/complyToNotice.jpg'),
                 const SizedBox(
                   width: 80,
                   child: Text(

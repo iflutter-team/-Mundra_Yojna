@@ -40,8 +40,9 @@ Widget siteMapPageScreenView3() {
         children: [
           verticalSizeBox(20),
           Container(
-            height: 200,
-            width: 500,
+            alignment: Alignment.topLeft,
+            height: 150,
+            width: 450,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),

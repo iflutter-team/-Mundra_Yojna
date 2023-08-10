@@ -20,10 +20,10 @@ class PrasasnikNirdeshPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.greenAccent,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const PrasasnikNirdeshPage2(),
+            () => const PrasasnikNirdeshPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class PrasasnikNirdeshPage1 extends StatelessWidget {
   }
 }
 
-
-Widget prasasanikNirdeshScreenView (){
+Widget prasasanikNirdeshScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,11 +41,11 @@ Widget prasasanikNirdeshScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.lightBlueAccent, 'प्रसन्निक निर्देश'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.orangeAccent, '• प्रसन्निक निर्देश •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.prasasanikNirdeshPart1, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
-          cardAllCommon(StringRes.prasasanikNirdeshPart2, Colors.yellow),
+          verticalSizeBox(Get.height * 0.020),
+          cardAllCommon(StringRes.prasasanikNirdeshPart2, Colors.deepPurple),
         ],
       ),
     ),

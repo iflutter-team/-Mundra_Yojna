@@ -20,10 +20,10 @@ class NiyamAndSharatPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.blueGrey,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const NiyamAndSharatPage2(),
+            () => const NiyamAndSharatPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class NiyamAndSharatPage1 extends StatelessWidget {
   }
 }
 
-
-Widget niyamAndSharatScreenView (){
+Widget niyamAndSharatScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,12 +41,12 @@ Widget niyamAndSharatScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.tealAccent, 'नियम और शर्ते'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.orangeAccent, '• नियम और शर्ते •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.nityAndSharatPart1, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.nityAndSharatPart2, Colors.teal),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.nityAndSharatPart3, Colors.limeAccent),
         ],
       ),

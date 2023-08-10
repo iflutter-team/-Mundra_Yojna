@@ -20,10 +20,10 @@ class YojnaKLaabhPage1 extends StatelessWidget {
           textColor: Colors.white,
           textSize: 22,
           fontWeight: FontWeight.bold,
-          color: Colors.blueGrey,
+          color: Colors.indigo,
           minHeight: Get.height * 0.065,
           onPressed: () => Get.to(
-                () => const YojnaKLaabhPage2(),
+            () => const YojnaKLaabhPage2(),
           ),
         ),
       ),
@@ -33,8 +33,7 @@ class YojnaKLaabhPage1 extends StatelessWidget {
   }
 }
 
-
-Widget yojnaKLaabhScreenView (){
+Widget yojnaKLaabhScreenView() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -42,10 +41,10 @@ Widget yojnaKLaabhScreenView (){
       child: Column(
         children: [
           verticalSizeBox(15),
-          containerCommon(Colors.teal, 'योजना के लाभ'),
-          verticalSizeBox(Get.height*0.030),
+          containerCommon(Colors.teal, '• योजना के लाभ •'),
+          verticalSizeBox(Get.height * 0.030),
           cardAllCommon(StringRes.yojnaKLaabhPart1, Colors.pinkAccent),
-          verticalSizeBox(Get.height*0.020),
+          verticalSizeBox(Get.height * 0.020),
           cardAllCommon(StringRes.yojnaKLaabhPart2, Colors.red),
         ],
       ),

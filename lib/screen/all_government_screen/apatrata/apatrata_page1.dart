@@ -39,7 +39,7 @@ Widget apatrataPage1Body() {
       child: Column(
         children: [
           verticalSizeBox(10),
-          containerCommon(Colors.purple, ""),
+          containerCommon(Colors.purple, "• अपात्रता •"),
           verticalSizeBox(15),
           cardAllCommon(
               "जिनके परिवार की सम्मिलित रूप से स्वघोषित वार्षिक आय 2.5 लाख से अधिक हो ।",
