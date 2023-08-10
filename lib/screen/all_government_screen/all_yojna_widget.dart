@@ -25,6 +25,7 @@ Widget allYojnaBody() {
         () => Get.to(
           () => const AllYojnaPage1(),
         ),
+        image: AssetRes.laadliYojna,
       ),
     ],
   );
