@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
+import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
@@ -12,6 +13,20 @@ class ReportAccountMisuse extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(GridViewController());
     return Scaffold(
+      floatingActionButton: GetBuilder<GridViewController>(
+        id: "ReportAccountMisuse",
+        builder: (controller) {
+          return ButtonWidget(
+            textSize: 25,
+            textColor: Colors.white,
+            text: 'N E X T',
+            color: Colors.red,
+            onPressed: () => controller.reportAccountMisuse(),
+            minHeight: 55,
+            minWidth: Get.width * 0.90,
+          );
+        },
+      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -35,39 +50,14 @@ class ReportAccountMisuse extends StatelessWidget {
 }
 
 Widget reportAccountMisuseScreen() {
-  return GetBuilder<GridViewController>(
-    id: 'ReportAccountMisuse',
-    builder: (controller) => ListView(
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 5),
+    child: ListView(
+      physics: const BouncingScrollPhysics(),
       children: [
         verticalSizeBox(Get.height * 0.030),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.reportAccountMisuse,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
+        cardAllCommon(StringRes.reportAccountMisuse, Colors.purpleAccent),
         verticalSizeBox(Get.height * 0.25),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: ButtonWidget(
-                textSize: 25,
-                textColor: Colors.white,
-                text: 'N E X T',
-                color: Colors.red,
-                onPressed: () => controller.reportAccountMisuse(),
-                minHeight: 55,
-                minWidth: Get.width * 0.90,
-              ),
-            ),
-          ],
-        ),
       ],
     ),
   );

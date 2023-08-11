@@ -8,10 +8,15 @@ Widget commonGridView({
 }) {
   return InkWell(
     onTap: onTap,
-    child: CircleAvatar(
-      radius: radius,
-      backgroundColor: color,
-      backgroundImage: AssetImage(image ?? ""),
+    child: Card(
+      elevation: 5,
+      shadowColor: Colors.blueAccent,
+      shape: const CircleBorder(),
+      child: CircleAvatar(
+        radius: radius,
+        backgroundColor: color,
+        backgroundImage: AssetImage(image ?? ""),
+      ),
     ),
   );
 }

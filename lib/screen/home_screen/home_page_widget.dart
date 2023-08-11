@@ -93,7 +93,6 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
           children: [
             verticalSizeBox(10),
             Container(
-              color: Colors.black,
               height: Get.width * 0.50,
               width: Get.width,
               child: image != null

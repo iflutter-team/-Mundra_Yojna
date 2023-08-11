@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
+import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
@@ -12,6 +13,20 @@ class IncomeTaxReturnITR extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(GridViewController());
     return Scaffold(
+      floatingActionButton: GetBuilder<GridViewController>(
+        id: "ITR",
+        builder: (controller) {
+          return ButtonWidget(
+            textSize: 25,
+            textColor: Colors.white,
+            text: 'N E X T',
+            color: Colors.red,
+            onPressed: () => controller.incomeTaxReturnITR(),
+            minHeight: 55,
+            minWidth: Get.width * 0.90,
+          );
+        },
+      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -35,39 +50,13 @@ class IncomeTaxReturnITR extends StatelessWidget {
 }
 
 Widget incomeTaxReturnScreen() {
-  return GetBuilder<GridViewController>(
-    id: 'ITR',
-    builder: (controller) => ListView(
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 10),
+    child: ListView(
       children: [
         verticalSizeBox(Get.height * 0.030),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.incomeTaxReturn,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
+        cardAllCommon(StringRes.incomeTaxReturn, Colors.pink),
         verticalSizeBox(Get.height * 0.21),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: ButtonWidget(
-                textSize: 25,
-                textColor: Colors.white,
-                text: 'N E X T',
-                color: Colors.red,
-                onPressed: () => controller.incomeTaxReturnITR(),
-                minHeight: 55,
-                minWidth: Get.width * 0.90,
-              ),
-            ),
-          ],
-        ),
       ],
     ),
   );

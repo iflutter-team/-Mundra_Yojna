@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
+import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
@@ -12,6 +13,20 @@ class EVerifyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(GridViewController());
     return Scaffold(
+      floatingActionButton: GetBuilder<GridViewController>(
+        id: "E-VerifyReturn",
+        builder: (controller) {
+          return ButtonWidget(
+            textSize: 25,
+            textColor: Colors.white,
+            text: 'N E X T',
+            color: Colors.red,
+            onPressed: () => controller.eVerifyReturn(),
+            minHeight: 55,
+            minWidth: Get.width * 0.90,
+          );
+        },
+      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -35,205 +50,42 @@ class EVerifyScreen extends StatelessWidget {
 }
 
 Widget eVerifyReturnPage() {
-  return GetBuilder<GridViewController>(
-    id: 'E-VerifyReturn',
-    builder: (controller) => ListView(
-      children: [
-        verticalSizeBox(Get.height * 0.030),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn1,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn2,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn3,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn4,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn5,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn6,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn7,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn8,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn9,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn10,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn11,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn12,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn13,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn14,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn15,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.060),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.eVerifyReturn16,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        verticalSizeBox(Get.height * 0.10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: ButtonWidget(
-                textSize: 25,
-                textColor: Colors.white,
-                text: 'N E X T',
-                color: Colors.red,
-                onPressed: () => controller.eVerifyReturn(),
-                minHeight: 55,
-                minWidth: Get.width * 0.90,
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
+  return ListView(
+    physics: const BouncingScrollPhysics(),
+    children: [
+      verticalSizeBox(20),
+      cardAllCommon(StringRes.eVerifyReturn1, Colors.blue),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn2, Colors.pinkAccent),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn3, Colors.orangeAccent),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn4, Colors.teal),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn5, Colors.lightBlueAccent),
+      verticalSizeBox(Get.height * 0.060),
+      cardAllCommon(StringRes.eVerifyReturn6, Colors.pink),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn7, Colors.indigoAccent),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn8, Colors.blueGrey),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn9, Colors.brown),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn10, Colors.teal),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn11, Colors.lime),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn12, Colors.pink),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn13, Colors.deepPurple),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn14, Colors.green),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn15, Colors.deepOrange),
+      verticalSizeBox(15),
+      cardAllCommon(StringRes.eVerifyReturn16, Colors.lightBlue),
+      verticalSizeBox(100),
+    ],
   );
 }

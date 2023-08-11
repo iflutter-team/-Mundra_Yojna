@@ -74,17 +74,19 @@ Widget quickLinksScreenGridview() {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 commonGridView(
-                    radius: 40,
+                    radius: 35,
                     image: "asserts/images/everifyReturn.png",
                     onTap: () {
                       Get.to(() => const EVerifyScreen());
                     }),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'e-Verify Return',
                     style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -96,14 +98,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const LinkAadharStatus());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: "asserts/images/linkAadharStatus.jpg"),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Link Aadhar Status',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -115,15 +117,15 @@ Widget quickLinksScreenGridview() {
                   onTap: () {
                     Get.to(const LinkAadharScreen());
                   },
-                  radius: 40,
+                  radius: 35,
                   image: "asserts/images/linkAadhar.jpg",
                 ),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Link Aadhar',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -141,14 +143,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const IncomeTaxReturnITR());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: "asserts/images/incomeTaxReturn.png"),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Income Tax Return (ITR)',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -160,14 +162,16 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const IncomeTaxCalculator());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: "asserts/images/taxCalendar.png"),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Income & Tax Calculator',
                     style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -179,14 +183,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const EPayTex());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: "asserts/images/ePayTax.png"),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'e-Pay Tax',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -204,14 +208,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const KnowPaymentStatus());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/knowPaymentStatus.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Know Payment Status',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -223,14 +227,16 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const InstantEPanScreen());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/instantEPan.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Instant E-Pan',
                     style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -242,14 +248,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const AuthenticateNoticeOrder());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/authenticate.jpg'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Authenticate Notice/Order',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -267,14 +273,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const KnowYourAO());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/knowYourAO.jpg'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Know Your A.O',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -286,14 +292,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const TdsOnCashWithdrwal());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/cashWithdrawal.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'TDS on Cash Withdrawal',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -305,14 +311,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const VerifyServiceRequest());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/verifyServiceRequest.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Verify Service Request',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -330,14 +336,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const SubmitTaxEvasion());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/taxEvasion.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Submit Tax Evasion petition',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -348,14 +354,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const ReportAccountMisuse());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/reportAccountMisuse.jpg'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Report Account Misuse',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -367,14 +373,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const VerifyYourPan());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/verifyYourPAn.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Verify Your PAN',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -392,14 +398,16 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const KnowTANDetails());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/knowTanDetails.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Know TAN Details',
                     style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -411,14 +419,16 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const TaxCalendar());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/taxCalendar.png'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Tax Calendar',
                     style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -430,14 +440,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const TaxInformationService());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/informationService.jpg'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
-                    'Tax information & Service',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    textAlign: TextAlign.center,
+                    'Information & Service',
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],
@@ -456,14 +466,14 @@ Widget quickLinksScreenGridview() {
                     onTap: () {
                       Get.to(() => const ComplyToNotice());
                     },
-                    radius: 40,
+                    radius: 35,
                     image: 'asserts/images/complyToNotice.jpg'),
                 const SizedBox(
-                  width: 80,
+                  width: 85,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Comply to Notice',
-                    style: TextStyle(
-                        color: Colors.black, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],

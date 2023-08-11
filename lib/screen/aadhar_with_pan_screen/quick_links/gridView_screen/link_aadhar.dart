@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
+import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 
@@ -13,6 +14,20 @@ class LinkAadharScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(GridViewController());
     return Scaffold(
+      floatingActionButton: GetBuilder<GridViewController>(
+        id: "LinkAadhar",
+        builder: (controller) {
+          return ButtonWidget(
+            textSize: 25,
+            textColor: Colors.white,
+            text: 'N E X T',
+            color: Colors.red,
+            onPressed: () => controller.linkAadhar(),
+            minHeight: 55,
+            minWidth: Get.width * 0.90,
+          );
+        },
+      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -36,59 +51,16 @@ class LinkAadharScreen extends StatelessWidget {
 }
 
 Widget linkAadharScreen() {
-  return GetBuilder<GridViewController>(
-    id: 'LinkAadhar',
-    builder: (controller) => ListView(
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 5),
+    child: ListView(
       children: [
         verticalSizeBox(Get.height * 0.030),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.linkAadhar,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.linkAadhar1,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(
-            width: Get.width * 0.90,
-            child: const Text(
-              StringRes.linkAadharNote,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
+        cardAllCommon(StringRes.linkAadhar, Colors.pink),
+        verticalSizeBox(10),
+        cardAllCommon(StringRes.linkAadhar1, Colors.green),
+        cardAllCommon(StringRes.linkAadharNote, Colors.pink),
         verticalSizeBox(Get.height * 0.15),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: ButtonWidget(
-                textSize: 25,
-                textColor: Colors.white,
-                text: 'N E X T',
-                color: Colors.red,
-                onPressed: () =>controller.linkAadhar(),
-                minHeight: 55,
-                minWidth: Get.width * 0.90,
-              ),
-            ),
-          ],
-        ),
       ],
     ),
   );
