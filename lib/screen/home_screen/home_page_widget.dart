@@ -119,7 +119,7 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
               minWidth: Get.width * 0.75,
               onPressed: onPressed,
             ),
-            verticalSizeBox(15)
+            verticalSizeBox(15),
           ],
         ),
       ),
