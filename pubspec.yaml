@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get:
   url_launcher: 6.1.12
+  facebook_audience_network: 
 
 dev_dependencies:
   flutter_test:

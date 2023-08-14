@@ -18,6 +18,15 @@ AppBar homePageAppBar() {
   );
 }
 
+Widget ads() {
+  return GetBuilder<HomeController>(
+    id: "ads",
+    builder: (controller) {
+      return controller.currentAd;
+    },
+  );
+}
+
 Widget homePageBody() {
   return SingleChildScrollView(
     physics: const BouncingScrollPhysics(),
@@ -59,6 +68,7 @@ Widget homePageBody() {
 
 Widget yojnaSubmitButton() {
   return GetBuilder<HomeController>(
+    id: "Yojna Page",
     builder: (controller) {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),

@@ -19,44 +19,44 @@ import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/what__is_mudra/what_
 
 Widget commonBox(Color colorBg, Color colorBorder, String text,
     Function() onPressed, Color iconBg) {
-  return InkWell(
-    onTap: onPressed,
-    child: Card(
-      elevation: 10,
-      shadowColor: Colors.black,
-      shape: OutlineInputBorder(
+  return Card(
+    elevation: 10,
+    shadowColor: Colors.black,
+    shape: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(width: 0, color: Colors.white)),
+    child: Container(
+      height: Get.height * 0.15,
+      width: Get.width * 0.45,
+      decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(width: 0, color: Colors.white)),
-      child: Container(
-        height: Get.height * 0.15,
-        width: Get.width * 0.45,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: colorBg,
-            border: Border.all(color: colorBorder, width: 8)),
-        child: Padding(
-          padding: const EdgeInsets.only(right: 15, left: 5),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                text,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
+          color: colorBg,
+          border: Border.all(color: colorBorder, width: 8)),
+      child: Padding(
+        padding: const EdgeInsets.only(right: 15, left: 5),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 20,
               ),
-              Container(
+            ),
+            InkWell(
+              onTap: onPressed,
+              child: Container(
                 decoration:
                     BoxDecoration(color: iconBg, shape: BoxShape.circle),
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Icon(Icons.arrow_forward, color: Colors.white),
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     ),
