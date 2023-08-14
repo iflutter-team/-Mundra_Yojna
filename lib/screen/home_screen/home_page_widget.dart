@@ -18,14 +18,14 @@ AppBar homePageAppBar() {
   );
 }
 
-Widget ads() {
-  return GetBuilder<HomeController>(
-    id: "ads",
-    builder: (controller) {
-      return controller.currentAd;
-    },
-  );
-}
+// Widget ads() {
+//   return GetBuilder<HomeController>(
+//     id: "ads",
+//     builder: (controller) {
+//       return controller.currentAd;
+//     },
+//   );
+// }
 
 Widget homePageBody() {
   return SingleChildScrollView(

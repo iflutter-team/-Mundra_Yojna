@@ -12,12 +12,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: homePageAppBar(),
       body: homePageBody(),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: ads(),
-        ),
-      ),
     );
   }
 }

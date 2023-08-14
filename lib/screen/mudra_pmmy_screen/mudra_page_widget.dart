@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/bank_list/bank_list_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/benefits_screen/benefits_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/categories_loan/categories_page1.dart';
@@ -169,13 +170,20 @@ AppBar mudraPageAppBar() {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
-    leading: IconButton(
-        onPressed: () => Get.back(),
-        icon: const Icon(
-          Icons.arrow_back,
-          size: 30,
-          color: Colors.black,
-        )),
+    leading: GetBuilder<HomeController>(
+      id: "app",
+      builder: (controller) {
+        return IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              size: 30,
+              color: Colors.black,
+            ));
+      },
+    ),
     title: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

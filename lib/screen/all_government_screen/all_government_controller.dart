@@ -5,8 +5,6 @@ class AllGovernmentController extends GetxController {
   HomeController homeController = Get.put(HomeController());
   @override
   void onInit() {
-    homeController.loadInterstitialAd();
-    update(["Yojna Page"]);
     super.onInit();
   }
 }
