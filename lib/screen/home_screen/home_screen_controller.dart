@@ -10,10 +10,10 @@ class HomeController extends GetxController {
   ProductId? productId;
 
   @override
-  Future<void> onInit() async {
-    await apiGet();
+  void onInit() {
+    apiGet();
     FacebookAudienceNetwork.init();
-    await showInter();
+    showInter();
     super.onInit();
   }
 
@@ -41,12 +41,12 @@ class HomeController extends GetxController {
   }
 
   showInter() {
-    FacebookInterstitialAd.loadInterstitialAd(
-      placementId: productId!.facebookInterstitialId!,
-      listener: (result, value) {
-        if (result == InterstitialAdResult.LOADED)
-          FacebookInterstitialAd.showInterstitialAd(delay: 2000);
-      },
-    );
+     FacebookInterstitialAd.loadInterstitialAd(
+       placementId: productId!.facebookInterstitialId!,
+       listener: (result, value) {
+         if (result == InterstitialAdResult.LOADED)
+           FacebookInterstitialAd.showInterstitialAd(delay: 2000);
+       },
+     );
   }
 }
