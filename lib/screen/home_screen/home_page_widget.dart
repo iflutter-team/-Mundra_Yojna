@@ -53,6 +53,7 @@ Widget homePageBody() {
         ),
         verticalSizeBox(10),
         GetBuilder<HomeController>(
+          id: "Link Aadhaar with Pan Card",
           builder: (controller) => cardCommon(
             image: AssetRes.link,
             StringRes.aadhaarWithPanHome,

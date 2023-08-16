@@ -1,25 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Widget elevatedButtonCommon(
-    {required void Function()? onPressed,
-    required String text,
-    Color? bgColor}) {
-  return ElevatedButton(
-      style: ButtonStyle(
-        elevation: const MaterialStatePropertyAll(0),
-        fixedSize: MaterialStatePropertyAll(
-            Size(Get.width * 0.85, Get.height * 0.060)),
-        backgroundColor: MaterialStatePropertyAll(bgColor ?? Colors.blue),
-      ),
-      onPressed: onPressed,
-      child: Text(
-        text,
-        style: const TextStyle(
-            fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold),
-      ));
-}
-
 class ButtonWidget extends StatelessWidget {
   final String text;
   final Color color;

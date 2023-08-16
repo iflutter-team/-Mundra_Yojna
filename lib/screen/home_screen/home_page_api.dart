@@ -1,6 +1,5 @@
-import 'dart:convert';
-
 import 'package:http/http.dart' as http;
+import 'package:mudra_yojana/api_model.dart';
 import 'package:mudra_yojana/services/api_service/http.dart';
 
 class HomeScreenApi {
@@ -11,7 +10,7 @@ class HomeScreenApi {
               "https://gist.githubusercontent.com/AndroidRL/4bd0b6ac5b9d3b26fdc2e6e7fa9307a7/raw/LoanMudra");
       if (response != null && response.statusCode == 200) {
         print(response.body);
-        return jsonEncode(response.body);
+        return productIdFromJson(response.body);
       }
     } catch (e) {
       print(e);
