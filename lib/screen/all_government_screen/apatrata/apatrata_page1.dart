@@ -24,7 +24,7 @@ class ApatrataPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(() => const ApatrataPage2()),
+          onPressed: () => const ApatrataPage2(),
         ),
       ),
     );

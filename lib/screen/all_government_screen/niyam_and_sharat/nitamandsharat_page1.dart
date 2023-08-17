@@ -22,9 +22,7 @@ class NiyamAndSharatPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const NiyamAndSharatPage2(),
-          ),
+          onPressed: () => const NiyamAndSharatPage2(),
         ),
       ),
       appBar: mudraPageAppBar(),

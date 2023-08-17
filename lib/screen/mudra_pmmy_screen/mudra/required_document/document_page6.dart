@@ -38,7 +38,7 @@ Widget document6() {
             fontWeight: FontWeight.bold,
             color: Colors.redAccent,
             minHeight: Get.height * 0.065,
-            onPressed: () => Get.to(() => const DocumentPage7()),
+            onPressed: () => const DocumentPage7(),
           ),
         )
       ],

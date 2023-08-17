@@ -17,16 +17,13 @@ class BankListPage1 extends StatelessWidget {
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(left: 40),
         child: ButtonWidget(
-          text: "N E X T",
-          textColor: Colors.white,
-          textSize: 22,
-          fontWeight: FontWeight.bold,
-          color: Colors.redAccent,
-          minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const BankListPage2(),
-          ),
-        ),
+            text: "N E X T",
+            textColor: Colors.white,
+            textSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Colors.redAccent,
+            minHeight: Get.height * 0.065,
+            onPressed: () => const BankListPage2()),
       ),
     );
   }

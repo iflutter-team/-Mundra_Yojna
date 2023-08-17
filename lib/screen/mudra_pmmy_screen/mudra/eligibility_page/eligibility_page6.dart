@@ -41,9 +41,7 @@ Widget eligibilityBody6() {
             fontWeight: FontWeight.bold,
             color: Colors.redAccent,
             minHeight: Get.height * 0.065,
-            onPressed: () => Get.to(
-              () => const EligibilityPage7(),
-            ),
+            onPressed: () => const EligibilityPage7(),
           ),
         )
       ],

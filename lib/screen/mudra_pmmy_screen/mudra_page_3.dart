@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/mudra_yojna_page.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 import 'package:mudra_yojana/utils/asset_res.dart';
@@ -14,12 +15,12 @@ class MudraPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mudraPageAppBar(),
-      body: mudraPage3Body(() => Get.to(() => const MudraYojna())),
+      body: mudraPage3Body(() => const MudraYojna()),
     );
   }
 }
 
-Widget mudraPage3Body(Function() onPressed) {
+Widget mudraPage3Body(onPressed) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(
@@ -28,14 +29,18 @@ Widget mudraPage3Body(Function() onPressed) {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           verticalSizeBox(15),
-          ButtonWidget(
-            text: "N E X T",
-            textSize: 22,
-            textColor: Colors.white,
-            minHeight: Get.height * 0.070,
-            fontWeight: FontWeight.bold,
-            color: Colors.pinkAccent,
-            onPressed: onPressed,
+          GetBuilder<HomeController>(
+            builder: (controller) {
+              return ButtonWidget(
+                text: "N E X T",
+                textSize: 22,
+                textColor: Colors.white,
+                minHeight: Get.height * 0.070,
+                fontWeight: FontWeight.bold,
+                color: Colors.pinkAccent,
+                onPressed: onPressed,
+              );
+            },
           ),
           verticalSizeBox(15),
           Container(

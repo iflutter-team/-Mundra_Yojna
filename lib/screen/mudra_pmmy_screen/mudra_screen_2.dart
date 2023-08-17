@@ -13,12 +13,12 @@ class MudraPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mudraPageAppBar(),
-      body: mudraPage2Body(() => Get.to(() => const MudraPage3())),
+      body: mudraPage2Body(() => MudraPage3()),
     );
   }
 }
 
-Widget mudraPage2Body(Function() onPressed) {
+Widget mudraPage2Body(onPressed) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(

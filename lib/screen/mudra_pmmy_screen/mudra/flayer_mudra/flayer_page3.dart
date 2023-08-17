@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/flayer_mudra/flayer_page4.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_screen_2.dart';
@@ -11,7 +10,7 @@ class FlayerPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mudraPageAppBar(),
-      body: mudraPage2Body(() => Get.to(()=>const FlayerPage4())),
+      body: mudraPage2Body(() => const FlayerPage4()),
     );
   }
 }

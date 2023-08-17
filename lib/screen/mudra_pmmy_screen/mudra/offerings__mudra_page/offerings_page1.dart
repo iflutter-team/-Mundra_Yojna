@@ -39,9 +39,7 @@ Widget offeringPage1Body() {
           fontWeight: FontWeight.bold,
           color: Colors.redAccent,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const OfferingPage2(),
-          ),
+          onPressed: () => const OfferingPage2(),
         ),
       ],
     ),

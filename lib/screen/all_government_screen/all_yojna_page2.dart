@@ -14,12 +14,12 @@ class AllYojnaPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mudraPageAppBar(),
-      body: pradhanMantriMudraYojna(() => Get.to(() => const AllYojna())),
+      body: pradhanMantriMudraYojna(() => const AllYojna()),
     );
   }
 }
 
-Widget pradhanMantriMudraYojna(Function() onPressed) {
+Widget pradhanMantriMudraYojna(onPressed) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15),
     child: SingleChildScrollView(

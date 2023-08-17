@@ -16,8 +16,9 @@ AppBar appBarCommon({String? title, Function()? onPressed, IconData? icon}) {
         id: "appBarCommon",
         builder: (controller) {
           return IconButton(
-              onPressed: () {
-                onPressed ?? Get.back();
+              onPressed: () async {
+                controller.showInter();
+                await onPressed ?? Get.back();
               },
               icon: Icon(
                 icon ?? Icons.arrow_back,

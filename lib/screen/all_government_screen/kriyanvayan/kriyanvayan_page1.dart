@@ -22,9 +22,7 @@ class KriyanVayanPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const KriyanVayanPage2(),
-          ),
+          onPressed: () => const KriyanVayanPage2(),
         ),
       ),
       appBar: mudraPageAppBar(),

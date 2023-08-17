@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 
 Widget commonGridView({
   required double radius,
   Color? color,
   String? image,
-  void Function()? onTap,
+  onTap,
 }) {
-  return InkWell(
-    onTap: onTap,
-    child: Card(
-      elevation: 5,
-      shadowColor: Colors.blueAccent,
-      shape: const CircleBorder(),
-      child: CircleAvatar(
-        radius: radius,
-        backgroundColor: color,
-        backgroundImage: AssetImage(image ?? ""),
-      ),
-    ),
+  return GetBuilder<HomeController>(
+    builder: (controller) {
+      return InkWell(
+        onTap: () {
+          controller.showInter();
+          Get.to(onTap);
+        },
+        child: Card(
+          elevation: 5,
+          shadowColor: Colors.blueAccent,
+          shape: const CircleBorder(),
+          child: CircleAvatar(
+            radius: radius,
+            backgroundColor: color,
+            backgroundImage: AssetImage(image ?? ""),
+          ),
+        ),
+      );
+    },
   );
 }

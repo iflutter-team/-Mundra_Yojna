@@ -18,8 +18,8 @@ import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/do
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/the_mudra/the_mudra_1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/what__is_mudra/what_is_page1.dart';
 
-Widget commonBox(Color colorBg, Color colorBorder, String text,
-    Function() onPressed, Color iconBg) {
+Widget commonBox(
+    Color colorBg, Color colorBorder, String text, onPressed, Color iconBg) {
   return Card(
     elevation: 1,
     shadowColor: Colors.black,
@@ -46,16 +46,23 @@ Widget commonBox(Color colorBg, Color colorBorder, String text,
                 fontSize: 20,
               ),
             ),
-            InkWell(
-              onTap: onPressed,
-              child: Container(
-                decoration:
-                    BoxDecoration(color: iconBg, shape: BoxShape.circle),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(Icons.arrow_forward, color: Colors.white),
-                ),
-              ),
+            GetBuilder<HomeController>(
+              builder: (controller) {
+                return InkWell(
+                  onTap: () {
+                    controller.showInter();
+                    Get.to(onPressed);
+                  },
+                  child: Container(
+                    decoration:
+                        BoxDecoration(color: iconBg, shape: BoxShape.circle),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.arrow_forward, color: Colors.white),
+                    ),
+                  ),
+                );
+              },
             )
           ],
         ),
@@ -72,61 +79,61 @@ Widget mudraPageBody() {
         Row(
           children: [
             commonBox(Colors.amber, Colors.green, "The MUDRA",
-                () => Get.to(() => const TheMudraPage1()), Colors.green),
+                () => const TheMudraPage1(), Colors.green),
             commonBox(Colors.redAccent, Colors.red, "Required Documents",
-                () => Get.to(() => const DocumentPage1()), Colors.green)
+                () => const DocumentPage1(), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.blueAccent, Colors.blue, "Eligibility",
-                () => Get.to(() => const EligibilityPage1()), Colors.green),
+                () => const EligibilityPage1(), Colors.green),
             commonBox(Colors.blueGrey, Colors.blueGrey, "Mudra Offerings",
-                () => Get.to(() => const OfferingPage1()), Colors.green)
+                () => const OfferingPage1(), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.orangeAccent, Colors.orange, "Mudra Flayer",
-                () => Get.to(() => const FlayerPage1()), Colors.green),
+                () => const FlayerPage1(), Colors.green),
             commonBox(Colors.deepPurple, Colors.purple, "MUDRA Loans",
-                () => Get.to(() => const CategoriesPage1()), Colors.green)
+                () => const CategoriesPage1(), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.pinkAccent, Colors.pink, "Covered Activities",
-                () => Get.to(() => const ActivitiesPage1()), Colors.green),
+                () => const ActivitiesPage1(), Colors.green),
             commonBox(Colors.indigo, Colors.indigo, "Benefits",
-                () => Get.to(() => const BenefitsPage1()), Colors.green)
+                () => const BenefitsPage1(), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.brown, Colors.brown, "Purpose of PMMY",
-                () => Get.to(() => const PurposePage1()), Colors.green),
+                () => const PurposePage1(), Colors.green),
             commonBox(
                 Colors.lightGreen,
                 Colors.lightGreen,
                 "Covered Businesses",
-                () => Get.to(() => const BusinessesPage1()),
+                () => const BusinessesPage1(),
                 Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.teal, Colors.teal, "What is Mudra Card?",
-                () => Get.to(() => const WhatIsPage1()), Colors.green),
+                () => const WhatIsPage1(), Colors.green),
             commonBox(Colors.redAccent, Colors.red, "List of Banks",
-                () => Get.to(() => const BankListPage1()), Colors.green)
+                () => const BankListPage1(), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(Colors.amber, Colors.amber, "Mainline NBFCs",
-                () => Get.to(() => const LinkPage1()), Colors.green),
+                () => const LinkPage1(), Colors.green),
             commonBox(Colors.blue, Colors.blue, "NBFC offering Mudra Bank",
-                () => Get.to(() => const MudraBankPage1()), Colors.green)
+                () => const MudraBankPage1(), Colors.green)
           ],
         ),
         Row(
@@ -135,10 +142,10 @@ Widget mudraPageBody() {
                 Colors.blueGrey,
                 Colors.blueGrey,
                 "How to Apply for PMMY?",
-                () => Get.to(() => const ApplyPage1()),
+                () => const ApplyPage1(),
                 Colors.green),
             commonBox(Colors.teal, Colors.teal, "FAOs on Mudra Loan",
-                () => Get.to(() => const FaqsPage1()), Colors.green)
+                () => const FaqsPage1(), Colors.green)
           ],
         ),
       ],
@@ -151,10 +158,11 @@ AppBar mudraPageAppBar() {
     backgroundColor: Colors.white,
     elevation: 0,
     leading: GetBuilder<HomeController>(
-      id: "app",
+      id: "mudraApp",
       builder: (controller) {
         return IconButton(
             onPressed: () {
+              controller.showInter();
               Get.back();
             },
             icon: const Icon(

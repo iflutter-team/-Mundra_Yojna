@@ -3,8 +3,12 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
+import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_pmmy_screen.dart';
 import 'package:mudra_yojana/utils/asset_res.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
+
+import '../aadhar_with_pan_screen/addhar_with_pan.dart';
+import '../all_government_screen/all_government.dart';
 
 AppBar homePageAppBar() {
   return AppBar(
@@ -35,31 +39,22 @@ Widget homePageBody() {
         verticalSizeBox(20),
         yojnaSubmitButton(),
         verticalSizeBox(15),
-        GetBuilder<HomeController>(
-          builder: (controller) => cardCommon(
-              StringRes.homePageMudraPmmy,
-              "प्रधानमंत्री मुद्रा योजना(PMMY)",
-              () => controller.goToMudraPmmYScreen(),
-              image: AssetRes.mudraHome),
+        cardCommon(StringRes.homePageMudraPmmy,
+            "प्रधानमंत्री मुद्रा योजना(PMMY)", () => MudraPmmYScreen(),
+            image: AssetRes.mudraHome),
+        verticalSizeBox(10),
+        cardCommon(
+          image: AssetRes.mudraYojna,
+          StringRes.homePageMudraPmmy,
+          "All Government Yojna's",
+          () => AllGovernmentScreen(),
         ),
         verticalSizeBox(10),
-        GetBuilder<HomeController>(
-          builder: (controller) => cardCommon(
-            image: AssetRes.mudraYojna,
-            StringRes.homePageMudraPmmy,
-            "All Government Yojna's",
-            () => controller.goToAllGovernmentYojna(),
-          ),
-        ),
-        verticalSizeBox(10),
-        GetBuilder<HomeController>(
-          id: "Link Aadhaar with Pan Card",
-          builder: (controller) => cardCommon(
-            image: AssetRes.link,
-            StringRes.aadhaarWithPanHome,
-            "Link Aadhaar with Pan Card",
-            () => controller.goToAadhaarWithPan(),
-          ),
+        cardCommon(
+          image: AssetRes.link,
+          StringRes.aadhaarWithPanHome,
+          "Link Aadhaar with Pan Card",
+          () => AadhaarWithPan(),
         ),
         verticalSizeBox(20),
       ],
@@ -81,7 +76,7 @@ Widget yojnaSubmitButton() {
           fontWeight: FontWeight.bold,
           icon: Icons.arrow_forward_outlined,
           minHeight: Get.height * 0.070,
-          onPressed: () => controller.goToYojnaPage(),
+          onPressed: () => AllGovernmentScreen(),
         ),
       );
     },

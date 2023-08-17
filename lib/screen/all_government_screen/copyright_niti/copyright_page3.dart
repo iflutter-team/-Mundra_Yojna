@@ -22,7 +22,7 @@ class CopyRightNitiPage3 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.pinkAccent,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(() => const AllYojna()),
+          onPressed: () => const AllYojna(),
         ),
       ),
       appBar: mudraPageAppBar(),

@@ -23,9 +23,7 @@ class PurposePage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.redAccent,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const PurposePage2(),
-          ),
+          onPressed: () => const PurposePage2(),
         ),
       ),
     );

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 
 class LinkAadharStatus extends StatelessWidget {
   const LinkAadharStatus({super.key});
@@ -15,14 +16,19 @@ class LinkAadharStatus extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            Get.back();
+        leading: GetBuilder<HomeController>(
+          builder: (controller) {
+            return IconButton(
+              onPressed: () {
+                controller.showInter();
+                Get.back();
+              },
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
+            );
           },
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
         ),
         title: const Text(
           'Link Aadhar Status',

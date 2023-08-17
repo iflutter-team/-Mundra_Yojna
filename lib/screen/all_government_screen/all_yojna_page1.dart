@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/all_government_screen/all_yojna_page2.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/utils/asset_res.dart';
 
 class AllYojnaPage1 extends StatelessWidget {
@@ -12,18 +13,22 @@ class AllYojnaPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            Get.back();
-          },
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-        ),
-      ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          leading: GetBuilder<HomeController>(
+            builder: (controller) {
+              return IconButton(
+                onPressed: () {
+                  controller.showInter();
+                  Get.back();
+                },
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
+              );
+            },
+          )),
       body: mukhyMantriLaadliYojna(),
     );
   }
@@ -71,9 +76,7 @@ Widget mukhyMantriLaadliYojna() {
                 textColor: Colors.white,
                 text: 'आगे बढे',
                 color: Colors.red,
-                onPressed: () {
-                  Get.to(() => const AllYojnaPage2());
-                },
+                onPressed: () => AllYojnaPage2(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

@@ -5,5 +5,7 @@ Widget horizontalSizeBox(double width) {
 }
 
 Widget verticalSizeBox(double height) {
-  return SizedBox(height: height);
+  return SizedBox(
+    height: height,
+  );
 }

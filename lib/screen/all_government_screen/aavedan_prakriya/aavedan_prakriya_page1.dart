@@ -42,7 +42,7 @@ Widget aavedanPrakriyaPage1Body() {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(() => const AavedanPrakriyaPage2()),
+          onPressed: () => const AavedanPrakriyaPage2(),
         )
       ],
     ),

@@ -30,7 +30,7 @@ class HomeController extends GetxController {
   }
 
   void goToMudraPmmYScreen() {
-    Get.to(() => const MudraPmmYScreen());
+    Get.to(() => MudraPmmYScreen());
   }
 
   void goToAllGovernmentYojna() {
@@ -48,9 +48,10 @@ class HomeController extends GetxController {
       placementId: productId!.facebookInterstitialId!,
       listener: (result, value) {
         if (result == InterstitialAdResult.LOADED)
-          FacebookInterstitialAd.showInterstitialAd(delay: 2000);
+          FacebookInterstitialAd.showInterstitialAd(delay: 0);
       },
     );
+    update(["mudraApp", "buttonCommon"]);
   }
 
   showBannerAd() {

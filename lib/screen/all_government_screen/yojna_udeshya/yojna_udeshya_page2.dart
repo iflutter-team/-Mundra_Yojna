@@ -35,9 +35,7 @@ Widget yojnaUdeshyaPage2Body() {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const YojnaUdeshyaPage3(),
-          ),
+          onPressed: () => const YojnaUdeshyaPage3(),
         )
       ],
     ),

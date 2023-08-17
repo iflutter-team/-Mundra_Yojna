@@ -22,9 +22,7 @@ class PrasasnikNirdeshPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const PrasasnikNirdeshPage2(),
-          ),
+          onPressed: () => const PrasasnikNirdeshPage2(),
         ),
       ),
       appBar: mudraPageAppBar(),

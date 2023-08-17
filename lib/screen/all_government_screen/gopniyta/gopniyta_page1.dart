@@ -22,9 +22,7 @@ class GopNiytaPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const GopNiytaPage2(),
-          ),
+          onPressed: () => const GopNiytaPage2(),
         ),
       ),
       appBar: mudraPageAppBar(),

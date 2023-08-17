@@ -22,7 +22,7 @@ class AavedanPrakriyaPage3 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(() => const AavedanPrakriyaPage4()),
+          onPressed: () => const AavedanPrakriyaPage4(),
         ),
       ),
       body: aavedanPrakriyaPage3Body(),

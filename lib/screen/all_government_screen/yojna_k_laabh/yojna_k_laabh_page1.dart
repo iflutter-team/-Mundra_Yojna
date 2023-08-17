@@ -22,9 +22,7 @@ class YojnaKLaabhPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const YojnaKLaabhPage2(),
-          ),
+          onPressed: () => const YojnaKLaabhPage2(),
         ),
       ),
       appBar: mudraPageAppBar(),

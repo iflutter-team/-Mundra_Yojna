@@ -40,9 +40,7 @@ Widget purveTyariPage1Body() {
           fontWeight: FontWeight.bold,
           color: Colors.indigo,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const PurveTyariPage2(),
-          ),
+          onPressed: () => const PurveTyariPage2(),
         )
       ],
     ),

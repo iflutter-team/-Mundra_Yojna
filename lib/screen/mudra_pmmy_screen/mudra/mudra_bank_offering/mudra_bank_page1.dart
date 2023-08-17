@@ -23,9 +23,7 @@ class MudraBankPage1 extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.redAccent,
           minHeight: Get.height * 0.065,
-          onPressed: () => Get.to(
-            () => const MudraBankPage2(),
-          ),
+          onPressed: () => const MudraBankPage2(),
         ),
       ),
     );
