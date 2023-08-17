@@ -21,7 +21,7 @@ import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/what__is_mudra/what_
 Widget commonBox(Color colorBg, Color colorBorder, String text,
     Function() onPressed, Color iconBg) {
   return Card(
-    elevation: 10,
+    elevation: 1,
     shadowColor: Colors.black,
     shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),
@@ -32,7 +32,7 @@ Widget commonBox(Color colorBg, Color colorBorder, String text,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: colorBg,
-          border: Border.all(color: colorBorder, width: 8)),
+          border: Border.all(color: colorBorder, width: 0)),
       child: Padding(
         padding: const EdgeInsets.only(right: 15, left: 5),
         child: Column(
@@ -71,94 +71,74 @@ Widget mudraPageBody() {
       children: [
         Row(
           children: [
-            commonBox(Colors.green.shade200, Colors.green, "The MUDRA",
-                () => Get.to(() => const TheMudraPage1()), Colors.blue),
-            commonBox(
-                Colors.redAccent.shade100,
-                Colors.red,
-                "Required Documents",
-                () => Get.to(() => const DocumentPage1()),
-                Colors.pinkAccent)
+            commonBox(Colors.amber, Colors.green, "The MUDRA",
+                () => Get.to(() => const TheMudraPage1()), Colors.green),
+            commonBox(Colors.redAccent, Colors.red, "Required Documents",
+                () => Get.to(() => const DocumentPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.blueAccent.shade100, Colors.blue, "Eligibility",
-                () => Get.to(() => const EligibilityPage1()), Colors.redAccent),
-            commonBox(
-                Colors.blueGrey.shade100,
-                Colors.blueGrey,
-                "Mudra Offerings",
-                () => Get.to(() => const OfferingPage1()),
-                Colors.green.shade300)
+            commonBox(Colors.blueAccent, Colors.blue, "Eligibility",
+                () => Get.to(() => const EligibilityPage1()), Colors.green),
+            commonBox(Colors.blueGrey, Colors.blueGrey, "Mudra Offerings",
+                () => Get.to(() => const OfferingPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(
-                Colors.orangeAccent.shade100,
-                Colors.orange,
-                "Mudra Flayer",
-                () => Get.to(() => const FlayerPage1()),
-                Colors.blueGrey),
-            commonBox(Colors.deepPurple.shade100, Colors.purple, "MUDRA Loans",
-                () => Get.to(() => const CategoriesPage1()), Colors.brown)
+            commonBox(Colors.orangeAccent, Colors.orange, "Mudra Flayer",
+                () => Get.to(() => const FlayerPage1()), Colors.green),
+            commonBox(Colors.deepPurple, Colors.purple, "MUDRA Loans",
+                () => Get.to(() => const CategoriesPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(
-                Colors.pinkAccent.shade100,
-                Colors.pink,
-                "Covered Activities",
-                () => Get.to(() => const ActivitiesPage1()),
-                Colors.cyan),
-            commonBox(Colors.indigo.shade100, Colors.indigo, "Benefits",
-                () => Get.to(() => const BenefitsPage1()), Colors.redAccent)
+            commonBox(Colors.pinkAccent, Colors.pink, "Covered Activities",
+                () => Get.to(() => const ActivitiesPage1()), Colors.green),
+            commonBox(Colors.indigo, Colors.indigo, "Benefits",
+                () => Get.to(() => const BenefitsPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.brown.shade200, Colors.brown, "Purpose of PMMY",
-                () => Get.to(() => const PurposePage1()), Colors.indigo),
+            commonBox(Colors.brown, Colors.brown, "Purpose of PMMY",
+                () => Get.to(() => const PurposePage1()), Colors.green),
             commonBox(
-                Colors.lightGreen.shade200,
+                Colors.lightGreen,
                 Colors.lightGreen,
                 "Covered Businesses",
                 () => Get.to(() => const BusinessesPage1()),
-                Colors.teal)
+                Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.teal.shade200, Colors.teal, "What is Mudra Card?",
-                () => Get.to(() => const WhatIsPage1()), Colors.lightGreen),
-            commonBox(Colors.redAccent.shade100, Colors.red, "List of Banks",
-                () => Get.to(() => const BankListPage1()), Colors.blueGrey)
+            commonBox(Colors.teal, Colors.teal, "What is Mudra Card?",
+                () => Get.to(() => const WhatIsPage1()), Colors.green),
+            commonBox(Colors.redAccent, Colors.red, "List of Banks",
+                () => Get.to(() => const BankListPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
-            commonBox(Colors.amber.shade200, Colors.amber, "Mainline NBFCs",
-                () => Get.to(() => const LinkPage1()), Colors.purpleAccent),
-            commonBox(
-                Colors.blue.shade100,
-                Colors.blue,
-                "NBFC offering Mudra Bank",
-                () => Get.to(() => const MudraBankPage1()),
-                Colors.pinkAccent)
+            commonBox(Colors.amber, Colors.amber, "Mainline NBFCs",
+                () => Get.to(() => const LinkPage1()), Colors.green),
+            commonBox(Colors.blue, Colors.blue, "NBFC offering Mudra Bank",
+                () => Get.to(() => const MudraBankPage1()), Colors.green)
           ],
         ),
         Row(
           children: [
             commonBox(
-                Colors.blueGrey.shade100,
+                Colors.blueGrey,
                 Colors.blueGrey,
                 "How to Apply for PMMY?",
                 () => Get.to(() => const ApplyPage1()),
-                Colors.blue),
-            commonBox(Colors.teal.shade100, Colors.teal, "FAOs on Mudra Loan",
-                () => Get.to(() => const FaqsPage1()), Colors.orange)
+                Colors.green),
+            commonBox(Colors.teal, Colors.teal, "FAOs on Mudra Loan",
+                () => Get.to(() => const FaqsPage1()), Colors.green)
           ],
         ),
       ],

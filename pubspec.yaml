@@ -39,7 +39,6 @@ dependencies:
   url_launcher: 6.1.12
   facebook_audience_network:
   http:
-  google_mobile_ads:
 
 dev_dependencies:
   flutter_test:

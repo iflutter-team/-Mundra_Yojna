@@ -14,10 +14,10 @@ class HomeController extends GetxController {
   bool isInterstitialAdLoaded = false;
 
   @override
-  void onInit() {
-    apiGet();
+  Future<void> onInit() async {
+    await apiGet();
     FacebookAudienceNetwork.init();
-    showInter();
+    await showInter();
     super.onInit();
   }
 
@@ -38,6 +38,7 @@ class HomeController extends GetxController {
   }
 
   Future<void> goToAadhaarWithPan() async {
+    showInter();
     update(["Link Aadhaar with Pan Card"]);
     Get.to(() => const AadhaarWithPan());
   }
@@ -53,7 +54,7 @@ class HomeController extends GetxController {
   }
 
   showBannerAd() {
-    FacebookBannerAd(
+    currentAd = FacebookBannerAd(
       placementId: productId!.facebookBannerId!,
       bannerSize: BannerSize.STANDARD,
       listener: (result, value) {
@@ -101,4 +102,9 @@ class HomeController extends GetxController {
       expandAnimationDuraion: 1000,
     );
   }
+
+  Widget currentAd = SizedBox(
+    width: 0.0,
+    height: 0.0,
+  );
 }

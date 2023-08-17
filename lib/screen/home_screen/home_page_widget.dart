@@ -92,12 +92,10 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
     {String? image}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
-    child: Card(
-      color: Colors.white10,
-      shape: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: Colors.white),
-      ),
+    child: Container(
+      decoration: BoxDecoration(
+          color: Colors.blueGrey.shade200,
+          borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
@@ -130,7 +128,7 @@ Widget cardCommon(String text, String buttonText, Function() onPressed,
               minWidth: Get.width * 0.75,
               onPressed: onPressed,
             ),
-            verticalSizeBox(15),
+            verticalSizeBox(10),
           ],
         ),
       ),

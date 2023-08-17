@@ -21,7 +21,7 @@ Widget containerCommon(Color color, String text,
 
 Widget cardAllCommon(String text, Color borderColor, {String? title}) {
   return Card(
-    elevation: 10,
+    elevation: 5,
     shape: OutlineInputBorder(
         borderSide: BorderSide(
           color: borderColor,
