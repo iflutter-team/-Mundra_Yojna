@@ -20,7 +20,7 @@ class HomeController extends GetxController {
     await showInter();
     super.onInit();
   }
-
+  
   Future<void> apiGet() async {
     productId = await HomeScreenApi.getData();
   }
