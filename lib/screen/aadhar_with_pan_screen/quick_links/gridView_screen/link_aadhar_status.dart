@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_screen.dart';
 import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 
 class LinkAadharStatus extends StatelessWidget {
@@ -60,7 +61,7 @@ Widget linkAadharStatusScreen() {
                 textColor: Colors.white,
                 text: 'Visit Link',
                 color: Colors.red,
-                onPressed: () => controller.linkAadharStatus(),
+                onPressed: () => QuickLinksScreen(),
                 minHeight: 55,
                 minWidth: Get.width * 0.90,
               ),

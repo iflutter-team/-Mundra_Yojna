@@ -4,6 +4,7 @@ import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_screen.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 class VerifyServiceRequest extends StatelessWidget {
@@ -13,19 +14,14 @@ class VerifyServiceRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(GridViewController());
     return Scaffold(
-      floatingActionButton: GetBuilder<GridViewController>(
-        id: "VerifyServiceRequest",
-        builder: (controller) {
-          return ButtonWidget(
-            textSize: 25,
-            textColor: Colors.white,
-            text: 'N E X T',
-            color: Colors.red,
-            onPressed: () => controller.verifyServiceRequest(),
-            minHeight: 55,
-            minWidth: Get.width * 0.90,
-          );
-        },
+      floatingActionButton: ButtonWidget(
+        textSize: 25,
+        textColor: Colors.white,
+        text: 'N E X T',
+        color: Colors.red,
+        onPressed: () => QuickLinksScreen(),
+        minHeight: 55,
+        minWidth: Get.width * 0.90,
       ),
       appBar: AppBar(
         centerTitle: true,

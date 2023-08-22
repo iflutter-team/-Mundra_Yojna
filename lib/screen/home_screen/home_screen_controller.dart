@@ -17,10 +17,9 @@ class HomeController extends GetxController {
   Future<void> onInit() async {
     await apiGet();
     FacebookAudienceNetwork.init();
-    await showInter();
     super.onInit();
   }
-  
+
   Future<void> apiGet() async {
     productId = await HomeScreenApi.getData();
   }

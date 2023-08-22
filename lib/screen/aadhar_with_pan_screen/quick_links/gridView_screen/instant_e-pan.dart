@@ -4,6 +4,7 @@ import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
+import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_screen.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 class InstantEPanScreen extends StatelessWidget {
@@ -21,7 +22,7 @@ class InstantEPanScreen extends StatelessWidget {
             textColor: Colors.white,
             text: 'N E X T',
             color: Colors.red,
-            onPressed: () => controller.instantEPan(),
+            onPressed: () => QuickLinksScreen(),
             minHeight: Get.height * 0.065,
             minWidth: Get.width * 0.90,
           );

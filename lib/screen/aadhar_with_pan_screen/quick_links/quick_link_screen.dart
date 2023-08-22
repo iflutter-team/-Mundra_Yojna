@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_widget.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen.dart';
 import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 
 class QuickLinksScreen extends StatelessWidget {
@@ -17,7 +18,7 @@ class QuickLinksScreen extends StatelessWidget {
             return IconButton(
               onPressed: () {
                 controller.showInter();
-                Get.back();
+                Get.to(() => HomeScreen());
               },
               icon: const Icon(
                 Icons.arrow_back,
