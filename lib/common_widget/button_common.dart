@@ -11,7 +11,7 @@ class ButtonWidget extends StatelessWidget {
   final double? minWidth;
   final double? minHeight;
   final FontWeight? fontWeight;
-  final onPressed;
+  final Function()? onPressed;
   final double? textSize;
   final double? fieldRadius;
   final Color? borderColor;
@@ -46,10 +46,7 @@ class ButtonWidget extends StatelessWidget {
           id: "buttonCommon",
           builder: (controller) {
             return ElevatedButton(
-              onPressed: () async {
-                controller.rewardedAds();
-                Get.to(onPressed);
-              },
+              onPressed: onPressed,
               style: ElevatedButton.styleFrom(
                 backgroundColor: bgColor,
                 elevation: 0,

@@ -43,7 +43,8 @@ class HomeController extends GetxController {
   }
 
   showInter() {
-    if (productId!.enableFacebookId == "1") {
+    if (productId!.enableFacebookId == "0") {
+      print("=======================================>fafna");
       FacebookInterstitialAd.loadInterstitialAd(
         placementId: productId!.facebookInterstitialId!,
         listener: (result, value) {
@@ -58,67 +59,77 @@ class HomeController extends GetxController {
   }
 
   showBannerAd() {
-    currentAd = FacebookBannerAd(
-      placementId: productId!.facebookBannerId!,
-      bannerSize: BannerSize.STANDARD,
-      listener: (result, value) {
-        if (kDebugMode) {
-          print("Banner Ad: $result -->  $value");
-        }
-      },
-    );
+    if (productId!.enableFacebookId == "0") {
+      currentAd = FacebookBannerAd(
+        placementId: productId!.facebookBannerId!,
+        bannerSize: BannerSize.STANDARD,
+        listener: (result, value) {
+          if (kDebugMode) {
+            print("Banner Ad: $result -->  $value");
+          }
+        },
+      );
+    } else {
+      currentAd;
+    }
   }
 
   void rewardedAds() {
-    FacebookRewardedVideoAd.loadRewardedVideoAd(
-      placementId: "YOUR_PLACEMENT_ID",
-      listener: (result, value) async {
-        if (productId!.enableFacebookId == "0") {
-          print("==============> ${productId!.enableFacebookId}");
-          await FacebookRewardedVideoAd.showRewardedVideoAd();
-        }
-        update(["buttonCommon"]);
-      },
-    );
+    if (productId!.enableFacebookId == "0") {
+      FacebookRewardedVideoAd.loadRewardedVideoAd(
+          placementId: "",
+          listener: (result, value) async {
+            await FacebookRewardedVideoAd.showRewardedVideoAd();
+          });
+    } else {
+      return null;
+    }
   }
 
-  Widget nativeBannerAd() {
-    return FacebookNativeAd(
-      placementId: productId!.facebookNativeId!,
-      adType: NativeAdType.NATIVE_BANNER_AD,
-      bannerAdSize: NativeBannerAdSize.HEIGHT_100,
-      width: double.infinity,
-      backgroundColor: Colors.blue,
-      titleColor: Colors.white,
-      descriptionColor: Colors.white,
-      buttonColor: Colors.deepPurple,
-      buttonTitleColor: Colors.white,
-      buttonBorderColor: Colors.white,
-      listener: (result, value) {
-        print("Native Banner Ad: $result --> $value");
-      },
-    );
-    update(["buttonCommon"]);
+  void nativeBannerAd() {
+    if (productId!.enableFacebookId == "0") {
+      currentAd = FacebookNativeAd(
+        placementId: productId!.facebookNativeId!,
+        adType: NativeAdType.NATIVE_BANNER_AD,
+        bannerAdSize: NativeBannerAdSize.HEIGHT_100,
+        width: double.infinity,
+        backgroundColor: Colors.blue,
+        titleColor: Colors.white,
+        descriptionColor: Colors.white,
+        buttonColor: Colors.deepPurple,
+        buttonTitleColor: Colors.white,
+        buttonBorderColor: Colors.white,
+        listener: (result, value) {
+          print("Native Banner Ad: $result --> $value");
+        },
+      );
+    } else {
+      currentAd;
+    }
   }
 
-  Widget nativeAd() {
-    return FacebookNativeAd(
-      placementId: productId!.facebookNativeId!,
-      adType: NativeAdType.NATIVE_AD_VERTICAL,
-      width: double.infinity,
-      height: 300,
-      backgroundColor: Colors.blue,
-      titleColor: Colors.white,
-      descriptionColor: Colors.white,
-      buttonColor: Colors.deepPurple,
-      buttonTitleColor: Colors.white,
-      buttonBorderColor: Colors.white,
-      listener: (result, value) {
-        print("Native Ad: $result --> $value");
-      },
-      keepExpandedWhileLoading: true,
-      expandAnimationDuraion: 1000,
-    );
+  void nativeAd() {
+    if (productId!.enableFacebookId == "0") {
+      currentAd = FacebookNativeAd(
+        placementId: productId!.facebookNativeId!,
+        adType: NativeAdType.NATIVE_AD_VERTICAL,
+        width: double.infinity,
+        height: 300,
+        backgroundColor: Colors.blue,
+        titleColor: Colors.white,
+        descriptionColor: Colors.white,
+        buttonColor: Colors.deepPurple,
+        buttonTitleColor: Colors.white,
+        buttonBorderColor: Colors.white,
+        listener: (result, value) {
+          print("Native Ad: $result --> $value");
+        },
+        keepExpandedWhileLoading: true,
+        expandAnimationDuraion: 1000,
+      );
+    } else {
+      currentAd;
+    }
   }
 
   Widget currentAd = SizedBox(

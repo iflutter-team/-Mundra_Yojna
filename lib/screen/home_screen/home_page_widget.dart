@@ -22,15 +22,6 @@ AppBar homePageAppBar() {
   );
 }
 
-// Widget ads() {
-//   return GetBuilder<HomeController>(
-//     id: "ads",
-//     builder: (controller) {
-//       return controller.currentAd;
-//     },
-//   );
-// }
-
 Widget homePageBody() {
   return SingleChildScrollView(
     physics: const BouncingScrollPhysics(),
@@ -39,22 +30,40 @@ Widget homePageBody() {
         verticalSizeBox(20),
         yojnaSubmitButton(),
         verticalSizeBox(15),
-        cardCommon(StringRes.homePageMudraPmmy,
-            "प्रधानमंत्री मुद्रा योजना(PMMY)", () => MudraPmmYScreen(),
-            image: AssetRes.mudraHome),
-        verticalSizeBox(10),
-        cardCommon(
-          image: AssetRes.mudraYojna,
-          StringRes.homePageMudraPmmy,
-          "All Government Yojna's",
-          () => AllGovernmentScreen(),
+        GetBuilder<HomeController>(
+          builder: (controller) {
+            return cardCommon(
+                StringRes.homePageMudraPmmy, "प्रधानमंत्री मुद्रा योजना(PMMY)",
+                () {
+              Get.to(() => MudraPmmYScreen());
+            }, image: AssetRes.mudraHome);
+          },
         ),
         verticalSizeBox(10),
-        cardCommon(
-          image: AssetRes.link,
-          StringRes.aadhaarWithPanHome,
-          "Link Aadhaar with Pan Card",
-          () => AadhaarWithPan(),
+        GetBuilder<HomeController>(
+          builder: (controller) {
+            return cardCommon(
+              image: AssetRes.mudraYojna,
+              StringRes.homePageMudraPmmy,
+              "All Government Yojna's",
+              () {
+                Get.to(() => AllGovernmentScreen());
+              },
+            );
+          },
+        ),
+        verticalSizeBox(10),
+        GetBuilder<HomeController>(
+          builder: (controller) {
+            return cardCommon(
+              image: AssetRes.link,
+              StringRes.aadhaarWithPanHome,
+              "Link Aadhaar with Pan Card",
+              () {
+                Get.to(() => AadhaarWithPan());
+              },
+            );
+          },
         ),
         verticalSizeBox(20),
       ],
@@ -76,7 +85,9 @@ Widget yojnaSubmitButton() {
           fontWeight: FontWeight.bold,
           icon: Icons.arrow_forward_outlined,
           minHeight: Get.height * 0.070,
-          onPressed: () => AllGovernmentScreen(),
+          onPressed: () {
+            Get.to(() => AllGovernmentScreen());
+          },
         ),
       );
     },
