@@ -96,9 +96,9 @@ class HomeController extends GetxController {
     }
   }
 
-  void nativeAd() {
+  Widget nativeAd() {
     if (productId!.enableFacebookId == "0") {
-      currentAd = FacebookNativeAd(
+      return FacebookNativeAd(
         placementId: productId!.facebookNativeId!,
         adType: NativeAdType.NATIVE_AD_VERTICAL,
         width: double.infinity,
@@ -116,7 +116,7 @@ class HomeController extends GetxController {
         expandAnimationDuraion: 1000,
       );
     } else {
-      currentAd;
+     return currentAd;
     }
   }
 
