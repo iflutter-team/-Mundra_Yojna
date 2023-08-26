@@ -43,13 +43,17 @@ class HomeController extends GetxController {
   }
 
   showInter() {
-    FacebookInterstitialAd.loadInterstitialAd(
-      placementId: productId!.facebookInterstitialId!,
-      listener: (result, value) {
-        if (result == InterstitialAdResult.LOADED)
-          FacebookInterstitialAd.showInterstitialAd(delay: 0);
-      },
-    );
+    if (productId!.enableFacebookId == "1") {
+      FacebookInterstitialAd.loadInterstitialAd(
+        placementId: productId!.facebookInterstitialId!,
+        listener: (result, value) {
+          if (result == InterstitialAdResult.LOADED)
+            FacebookInterstitialAd.showInterstitialAd(delay: 0);
+        },
+      );
+    } else {
+      return null;
+    }
     update(["mudraApp", "buttonCommon"]);
   }
 
@@ -65,9 +69,22 @@ class HomeController extends GetxController {
     );
   }
 
+  void rewardedAds() {
+    FacebookRewardedVideoAd.loadRewardedVideoAd(
+      placementId: "YOUR_PLACEMENT_ID",
+      listener: (result, value) async {
+        if (productId!.enableFacebookId == "0") {
+          print("==============> ${productId!.enableFacebookId}");
+          await FacebookRewardedVideoAd.showRewardedVideoAd();
+        }
+        update(["buttonCommon"]);
+      },
+    );
+  }
+
   Widget nativeBannerAd() {
     return FacebookNativeAd(
-      placementId: "IMG_16_9_APP_INSTALL#2312433698835503_2964953543583512",
+      placementId: productId!.facebookNativeId!,
       adType: NativeAdType.NATIVE_BANNER_AD,
       bannerAdSize: NativeBannerAdSize.HEIGHT_100,
       width: double.infinity,
@@ -81,6 +98,7 @@ class HomeController extends GetxController {
         print("Native Banner Ad: $result --> $value");
       },
     );
+    update(["buttonCommon"]);
   }
 
   Widget nativeAd() {
