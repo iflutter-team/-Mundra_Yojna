@@ -5,6 +5,7 @@ import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
+import '../../home_screen/home_screen_controller.dart';
 import 'aavedan_prakriya_page3.dart';
 
 class AavedanPrakriyaPage2 extends StatelessWidget {
@@ -13,6 +14,11 @@ class AavedanPrakriyaPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       appBar: mudraPageAppBar(),
       body: aavedanPrakriyaPage2Body(),
     );

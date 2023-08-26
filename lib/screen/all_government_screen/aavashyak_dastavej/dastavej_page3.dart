@@ -6,12 +6,19 @@ import 'package:mudra_yojana/screen/all_government_screen/aavashyak_dastavej/das
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
+import '../../home_screen/home_screen_controller.dart';
+
 class DastavejPage3 extends StatelessWidget {
   const DastavejPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       appBar: mudraPageAppBar(),
       body: dastavejPage3Body(),
     );

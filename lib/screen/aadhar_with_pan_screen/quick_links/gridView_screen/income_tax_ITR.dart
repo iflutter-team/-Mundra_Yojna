@@ -5,6 +5,7 @@ import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_screen.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
 
 class IncomeTaxReturnITR extends StatelessWidget {
@@ -12,16 +13,11 @@ class IncomeTaxReturnITR extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(GridViewController());
     return Scaffold(
-      floatingActionButton: ButtonWidget(
-        textSize: 25,
-        textColor: Colors.white,
-        text: 'N E X T',
-        color: Colors.red,
-        onPressed: () => QuickLinksScreen(),
-        minHeight: 55,
-        minWidth: Get.width * 0.90,
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -50,6 +46,21 @@ Widget incomeTaxReturnScreen() {
     padding: const EdgeInsets.symmetric(horizontal: 10),
     child: ListView(
       children: [
+        SizedBox(height: 20),
+        GetBuilder<HomeController>(
+          id: "incomeTaxITR",
+          builder: (controller) {
+            return ButtonWidget(
+              textSize: 25,
+              textColor: Colors.white,
+              text: 'N E X T',
+              color: Colors.red,
+              onPressed: () => QuickLinksScreen(),
+              minHeight: 55,
+              minWidth: Get.width * 0.90,
+            );
+          },
+        ),
         verticalSizeBox(Get.height * 0.030),
         cardAllCommon(StringRes.incomeTaxReturn, Colors.pink),
         verticalSizeBox(Get.height * 0.21),

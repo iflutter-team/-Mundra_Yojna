@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
 import 'package:mudra_yojana/screen/all_government_screen/aavashyak_dastavej/dastavej_page2.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
@@ -12,6 +13,11 @@ class DastavejPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       appBar: mudraPageAppBar(),
       body: dastavejPage1Body(),
     );

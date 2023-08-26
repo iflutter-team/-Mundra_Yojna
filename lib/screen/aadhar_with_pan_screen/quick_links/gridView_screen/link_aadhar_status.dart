@@ -11,8 +11,12 @@ class LinkAadharStatus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(GridViewController());
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       backgroundColor: const Color(0xfffef4f3),
       appBar: AppBar(
         centerTitle: true,

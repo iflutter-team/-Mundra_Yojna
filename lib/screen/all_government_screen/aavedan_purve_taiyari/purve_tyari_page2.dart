@@ -7,12 +7,19 @@ import 'package:mudra_yojana/screen/all_government_screen/aavedan_purve_taiyari/
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
+import '../../home_screen/home_screen_controller.dart';
+
 class PurveTyariPage2 extends StatelessWidget {
   const PurveTyariPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       appBar: mudraPageAppBar(),
       body: purveTyariPage2Body(),
     );

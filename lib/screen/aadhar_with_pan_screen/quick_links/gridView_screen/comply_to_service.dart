@@ -3,25 +3,21 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
-import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/gridView_screen/gridView_controller.dart';
 import 'package:mudra_yojana/screen/aadhar_with_pan_screen/quick_links/quick_link_screen.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
+
+import '../../../home_screen/home_screen_controller.dart';
 
 class ComplyToNotice extends StatelessWidget {
   const ComplyToNotice({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(GridViewController());
     return Scaffold(
-      floatingActionButton: ButtonWidget(
-        textSize: 25,
-        textColor: Colors.white,
-        text: 'N E X T',
-        color: Colors.red,
-        onPressed: () => QuickLinksScreen(),
-        minHeight: 55,
-        minWidth: Get.width * 0.90,
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -51,6 +47,21 @@ Widget complyToNoticeScreen() {
     child: ListView(
       physics: const BouncingScrollPhysics(),
       children: [
+        SizedBox(height: 20),
+        GetBuilder<HomeController>(
+          id: "complyToNotice",
+          builder: (controller) {
+            return ButtonWidget(
+              textSize: 25,
+              textColor: Colors.white,
+              text: 'N E X T',
+              color: Colors.red,
+              onPressed: () => QuickLinksScreen(),
+              minHeight: 55,
+              minWidth: Get.width * 0.90,
+            );
+          },
+        ),
         verticalSizeBox(Get.height * 0.030),
         cardAllCommon(StringRes.complyToNotice, Colors.purpleAccent),
         verticalSizeBox(Get.height * 0.10),

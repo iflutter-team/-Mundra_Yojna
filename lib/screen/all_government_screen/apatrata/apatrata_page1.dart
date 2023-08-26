@@ -6,6 +6,7 @@ import 'package:mudra_yojana/screen/all_government_screen/apatrata/apatrata_page
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
 import '../../../common_widget/button_common.dart';
+import '../../home_screen/home_screen_controller.dart';
 
 class ApatrataPage1 extends StatelessWidget {
   const ApatrataPage1({super.key});
@@ -13,6 +14,11 @@ class ApatrataPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
       appBar: mudraPageAppBar(),
       body: apatrataPage1Body(),
       floatingActionButton: Padding(
