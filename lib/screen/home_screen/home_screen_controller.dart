@@ -58,9 +58,9 @@ class HomeController extends GetxController {
     update(["mudraApp", "buttonCommon"]);
   }
 
-  showBannerAd() {
+  Widget showBannerAd() {
     if (productId!.enableFacebookId == "0") {
-      currentAd = FacebookBannerAd(
+      return FacebookBannerAd(
         placementId: productId!.facebookBannerId!,
         bannerSize: BannerSize.STANDARD,
         listener: (result, value) {
@@ -70,25 +70,13 @@ class HomeController extends GetxController {
         },
       );
     } else {
-      currentAd;
+      return currentAd;
     }
   }
 
-  void rewardedAds() {
+  Widget nativeBannerAd() {
     if (productId!.enableFacebookId == "0") {
-      FacebookRewardedVideoAd.loadRewardedVideoAd(
-          placementId: "",
-          listener: (result, value) async {
-            await FacebookRewardedVideoAd.showRewardedVideoAd();
-          });
-    } else {
-      return null;
-    }
-  }
-
-  void nativeBannerAd() {
-    if (productId!.enableFacebookId == "0") {
-      currentAd = FacebookNativeAd(
+      return FacebookNativeAd(
         placementId: productId!.facebookNativeId!,
         adType: NativeAdType.NATIVE_BANNER_AD,
         bannerAdSize: NativeBannerAdSize.HEIGHT_100,
@@ -104,7 +92,7 @@ class HomeController extends GetxController {
         },
       );
     } else {
-      currentAd;
+      return currentAd;
     }
   }
 

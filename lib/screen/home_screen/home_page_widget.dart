@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
-import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_pmmy_screen.dart';
 import 'package:mudra_yojana/utils/asset_res.dart';
 import 'package:mudra_yojana/utils/string_res.dart';
@@ -22,6 +21,15 @@ AppBar homePageAppBar() {
   );
 }
 
+// Widget ads() {
+//   return GetBuilder<HomeController>(
+//     id: "ads",
+//     builder: (controller) {
+//       return controller.currentAd;
+//     },
+//   );
+// }
+
 Widget homePageBody() {
   return SingleChildScrollView(
     physics: const BouncingScrollPhysics(),
@@ -30,40 +38,22 @@ Widget homePageBody() {
         verticalSizeBox(20),
         yojnaSubmitButton(),
         verticalSizeBox(15),
-        GetBuilder<HomeController>(
-          builder: (controller) {
-            return cardCommon(
-                StringRes.homePageMudraPmmy, "प्रधानमंत्री मुद्रा योजना(PMMY)",
-                () {
-              Get.to(() => MudraPmmYScreen());
-            }, image: AssetRes.mudraHome);
-          },
+        cardCommon(StringRes.homePageMudraPmmy,
+            "प्रधानमंत्री मुद्रा योजना(PMMY)", () => MudraPmmYScreen(),
+            image: AssetRes.mudraHome),
+        verticalSizeBox(10),
+        cardCommon(
+          image: AssetRes.mudraYojna,
+          StringRes.homePageMudraPmmy,
+          "All Government Yojna's",
+          () => AllGovernmentScreen(),
         ),
         verticalSizeBox(10),
-        GetBuilder<HomeController>(
-          builder: (controller) {
-            return cardCommon(
-              image: AssetRes.mudraYojna,
-              StringRes.homePageMudraPmmy,
-              "All Government Yojna's",
-              () {
-                Get.to(() => AllGovernmentScreen());
-              },
-            );
-          },
-        ),
-        verticalSizeBox(10),
-        GetBuilder<HomeController>(
-          builder: (controller) {
-            return cardCommon(
-              image: AssetRes.link,
-              StringRes.aadhaarWithPanHome,
-              "Link Aadhaar with Pan Card",
-              () {
-                Get.to(() => AadhaarWithPan());
-              },
-            );
-          },
+        cardCommon(
+          image: AssetRes.link,
+          StringRes.aadhaarWithPanHome,
+          "Link Aadhaar with Pan Card",
+          () => AadhaarWithPan(),
         ),
         verticalSizeBox(20),
       ],
@@ -72,25 +62,17 @@ Widget homePageBody() {
 }
 
 Widget yojnaSubmitButton() {
-  return GetBuilder<HomeController>(
-    id: "Yojna Page",
-    builder: (controller) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: ButtonWidget(
-          text: "Yojna Page",
-          textColor: Colors.white,
-          textSize: 22,
-          color: Colors.red,
-          fontWeight: FontWeight.bold,
-          icon: Icons.arrow_forward_outlined,
-          minHeight: Get.height * 0.070,
-          onPressed: () {
-            Get.to(() => AllGovernmentScreen());
-          },
-        ),
-      );
-    },
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15),
+    child: ButtonWidget(
+        text: "Yojna Page",
+        textColor: Colors.white,
+        textSize: 22,
+        color: Colors.red,
+        fontWeight: FontWeight.bold,
+        icon: Icons.arrow_forward_outlined,
+        minHeight: Get.height * 0.070,
+        onPressed: () => AllGovernmentScreen()),
   );
 }
 

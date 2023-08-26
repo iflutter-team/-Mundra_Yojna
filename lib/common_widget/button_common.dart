@@ -11,7 +11,7 @@ class ButtonWidget extends StatelessWidget {
   final double? minWidth;
   final double? minHeight;
   final FontWeight? fontWeight;
-  final Function()? onPressed;
+  final onPressed;
   final double? textSize;
   final double? fieldRadius;
   final Color? borderColor;
@@ -46,7 +46,10 @@ class ButtonWidget extends StatelessWidget {
           id: "buttonCommon",
           builder: (controller) {
             return ElevatedButton(
-              onPressed: onPressed,
+              onPressed: () {
+                controller.showInter();
+                Get.to(onPressed);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: bgColor,
                 elevation: 0,
