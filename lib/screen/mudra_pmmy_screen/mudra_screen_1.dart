@@ -39,7 +39,7 @@ Widget mudraPage1() {
           color: Colors.redAccent,
           minHeight: Get.height * 0.065,
           onPressed: () => MudraPage2(),
-        )
+        ),
       ],
     ),
   );

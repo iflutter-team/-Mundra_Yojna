@@ -6,6 +6,8 @@ import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/do
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page4.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
+import '../../../home_screen/home_screen_controller.dart';
+
 class DocumentPage3 extends StatelessWidget {
   const DocumentPage3({super.key});
 
@@ -14,6 +16,11 @@ class DocumentPage3 extends StatelessWidget {
     return Scaffold(
       appBar: mudraPageAppBar(),
       body: document3(),
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
     );
   }
 }

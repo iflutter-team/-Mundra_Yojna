@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page1.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/required_document/document_page7.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
@@ -14,6 +15,11 @@ class DocumentPage6 extends StatelessWidget {
     return Scaffold(
       appBar: mudraPageAppBar(),
       body: document6(),
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
     );
   }
 }

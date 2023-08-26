@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/how_to_apply/apply_page2.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
@@ -50,8 +50,14 @@ Widget applyPageBody() {
               "Step 2 :\n\nApproach a lender who is enrolled under the MUDRA scheme and fill up the application form.",
               Colors.teal),
           verticalSizeBox(12),
-          cardAllCommon(
-              "Step 3 :\n\nSubmit the necessary documents.", Colors.amberAccent)
+          cardAllCommon("Step 3 :\n\nSubmit the necessary documents.",
+              Colors.amberAccent),
+          verticalSizeBox(5),
+          GetBuilder<HomeController>(
+            builder: (controller) {
+              return controller.nativeAd();
+            },
+          ),
         ],
       ),
     ),

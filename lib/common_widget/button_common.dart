@@ -46,8 +46,8 @@ class ButtonWidget extends StatelessWidget {
           id: "buttonCommon",
           builder: (controller) {
             return ElevatedButton(
-              onPressed: () {
-                controller.showInter();
+              onPressed: () async {
+                await controller.showInter();
                 Get.to(onPressed);
               },
               style: ElevatedButton.styleFrom(

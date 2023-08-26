@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mudra_yojana/common_widget/button_common.dart';
 import 'package:mudra_yojana/common_widget/common_container.dart';
 import 'package:mudra_yojana/common_widget/margin_common.dart';
+import 'package:mudra_yojana/screen/home_screen/home_screen_controller.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra/what__is_mudra/what_is_page2.dart';
 import 'package:mudra_yojana/screen/mudra_pmmy_screen/mudra_page_widget.dart';
 
@@ -14,6 +15,11 @@ class WhatIsPage1 extends StatelessWidget {
     return Scaffold(
       appBar: mudraPageAppBar(),
       body: whatIsPageBody(),
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) {
+          return controller.nativeAd();
+        },
+      ),
     );
   }
 }
